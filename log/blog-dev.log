@@ -1,0 +1,15 @@
+2020-08-05 21:40:35.723  INFO 13844 --- [restartedMain] com.blog.Blog2Application                : Starting Blog2Application on 刘涛 with PID 13844 (E:\IDEAcode\lt\blogs\blog2\target\classes started by 钟意你 in E:\IDEAcode\lt\blogs)
+2020-08-05 21:40:35.744 DEBUG 13844 --- [restartedMain] com.blog.Blog2Application                : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-08-05 21:40:35.745  INFO 13844 --- [restartedMain] com.blog.Blog2Application                : The following profiles are active: dev
+2020-08-05 21:40:36.388  INFO 13844 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-05 21:40:36.391  INFO 13844 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-05 21:40:49.089  INFO 13844 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2020-08-05 21:40:49.232  INFO 13844 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-08-05 21:40:49.233  INFO 13844 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-08-05 21:40:50.346  INFO 13844 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-08-05 21:40:50.347  INFO 13844 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 13955 ms
+2020-08-05 21:41:00.350  INFO 13844 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-05 21:41:01.515  INFO 13844 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-08-05 21:41:05.349  INFO 13844 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-08-05 21:41:06.719  INFO 13844 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2020-08-05 21:41:06.851  INFO 13844 --- [restartedMain] com.blog.Blog2Application                : Started Blog2Application in 44.393 seconds (JVM running for 66.178)
