@@ -21,7 +21,7 @@ public class MyBeanUtils {
     public static String[] getNullPropertyNames(Object source) {
         BeanWrapper beanWrapper = new BeanWrapperImpl(source);
         PropertyDescriptor[] pds =  beanWrapper.getPropertyDescriptors();
-        List<String> nullPropertyNames = new ArrayList<>();
+        List<String> nullPropertyNames = new ArrayList<String>();
         for (PropertyDescriptor pd : pds) {
             String propertyName = pd.getName();
             if (beanWrapper.getPropertyValue(propertyName) == null) {
