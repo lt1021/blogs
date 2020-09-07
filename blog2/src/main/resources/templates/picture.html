@@ -1,8 +1,12 @@
 <!DOCTYPE html>
-<html lang="cn" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head  th:replace="_fragments :: head(~{::title})">
-  <title>关于我</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>照片墙</title>
+
+  <link rel="shortcut icon" href="../static/images/qly.ico" type="image/x-icon" />
 </head>
 
 <body class="picture-bg">
@@ -10,53 +14,36 @@
   <!--头部导航-->
   <nav th:replace="_fragments :: menu(5)" ></nav>
 
-  <!--中间内容-->
-  <!--<div  class="m-container m-padded-tb-big animated fadeIn">-->
-    <!--<div class="ui container">-->
+  <!--顶部图片-->
+  <div class="m-bg-type_outer" style="width: 100%;height: 40%">
+    <img src="../static/images/qly1.png" th:src="@{/images/qly1.png}" alt="" class="ui m-bg image" style="width: 100%;height: 100%">
+    <div class="m-bg-class_cover">
+      <div class="ui container" style="position: relative ;bottom: -540px;">
+        <div class="m-font-size-title m-right-bottom" align="center" style="font-family:'STXingkai'">照片墙</div>
+        <div class="m-font-size-text-init-title m-margin-top" align="center">愿你走出半生，归来仍是少年</div>
+      </div>
+    </div>
+  </div>
+  <!--照片墙-->
+  <div id="picture-main">
 
-      <!--<div class="ui stackable grid">-->
-        <!--<div class="eleven wide column">-->
-          <!--<div class="ui segment">-->
-            <!--<img th:src="@{/images/1.jpg}" alt="" class="ui rounded image">-->
-          <!--</div>-->
-        <!--</div>-->
+    <article class="thumb">
+      <div class="ma5-gallery">
+        <div class="rthumbnail">
+          <a href="../static/images/mzqly.jpg">
+            <img class="picture-zmki_px" src="../static/images/mzqly.jpg">
+          </a>
+          <div class="m-picture-text">起风了</div>
+          <div  class="rcaption">
+            <div style="font-size: large;">起风了</div>
+            <div style="font-size: small" class="m-margin-top">2020-02-02 &nbsp;深圳</div>
+            <p style="font-size: small">我曾难自拔于世界之大，也沉迷于其中梦话</p>
+          </div>
+        </div>
+      </div>
+    </article>
 
-        <!--<div class="five wide column">-->
-          <!--<div class="ui top attached segment">-->
-            <!--<div class="ui header">关于我</div>-->
-          <!--</div>-->
-          <!--<div class="ui attached segment">-->
-            <!--<p class="m-text">刘涛，一个java程序员，一个编程爱好者</p>-->
-            <!--<p class="m-text">喜欢编程，喜欢运动，喜欢动漫，喜欢音乐，喜欢旅游</p>-->
-            <!--<p class="m-text">希望结识志趣相投的小伙伴(#^.^#).</p>-->
-          <!--</div>-->
-          <!--<div class="ui attached segment">-->
-            <!--<div class="ui orange basic left pointing label">编程</div>-->
-            <!--<div class="ui orange basic left pointing label">跑步</div>-->
-            <!--<div class="ui orange basic left pointing label">看电影</div>-->
-            <!--<div class="ui orange basic left pointing label">听音乐</div>-->
-          <!--</div>-->
-          <!--<div class="ui attached segment">-->
-            <!--<div class="ui teal basic left pointing label m-margin-tb-tiny">ssm</div>-->
-            <!--<div class="ui teal basic left pointing label m-margin-tb-tiny">springboot</div>-->
-            <!--<div class="ui teal basic left pointing label m-margin-tb-tiny">mysql</div>-->
-            <!--<div class="ui teal basic left pointing label m-margin-tb-tiny">html</div>-->
-            <!--<div class="ui teal basic left pointing label m-margin-tb-tiny">...</div>-->
-          <!--</div>-->
-          <!--<div class="ui bottom attached segment">-->
-            <!--<a href="#" class="ui circular icon button"><i class="github icon"></i></a>-->
-            <!--<a href="#" class="ui wechat circular icon button"><i class="weixin icon"></i></a>-->
-            <!--<a href="#" class="ui qq circular icon button" data-content="2811499930" data-position="bottom center"><i class="qq icon"></i></a>-->
-          <!--</div>-->
-
-          <!--<div class="ui wechat-qr flowing popup transition hidden">-->
-            <!--<img src="../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}" alt="" class="ui rounded image" style="width: 110px">-->
-          <!--</div>-->
-        <!--</div>-->
-      <!--</div>-->
-
-    <!--</div>-->
-  <!--</div>-->
+  </div>
 
   <br>
   <br>
@@ -72,6 +59,7 @@
   </th:block>
 
   <script>
+
     $('.menu.toggle').click(function () {
       $('.m-item').toggleClass('m-mobile-hide');
     });
