@@ -23,4 +23,5 @@ logging:  #日志级别
 
   #开发环境
 server:
-  port: 80
+  port: 8082
+

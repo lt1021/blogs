@@ -8,7 +8,7 @@
 <body class="aboutme-bg">
 
   <!--头部导航-->
-  <nav th:replace="_fragments :: menu(5)" ></nav>
+  <nav th:replace="_fragments :: menu(8)" ></nav>
 
   <!--中间内容-->
   <div  class="m-container m-padded-tb-big animated fadeIn">
@@ -50,7 +50,7 @@
           </div>
 
           <div class="ui wechat-qr flowing popup transition hidden">
-            <img src="../static/images/wechat.jpg" th:src="@{}" alt="" class="ui rounded image" style="width: 110px">
+            <img src="../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}" alt="" class="ui rounded image" style="width: 110px">
           </div>
         </div>
       </div>
