@@ -6,11 +6,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 /**
  * 照片墙
  */
-@Controller
+@Controller()
 public class PictureController {
     @GetMapping("/picture")
     public String picture(){
-
-        return "photo";
+        return "picture";
     }
+
 }
+
