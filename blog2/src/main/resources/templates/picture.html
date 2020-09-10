@@ -29,15 +29,15 @@
 
     <article class="thumb">
       <div class="ma5-gallery">
-        <div class="rthumbnail">
+        <div class="rthumbnail" th:each="picture, iterStat : ${pageInfo}">
           <a href="../static/images/mzqly.jpg">
             <img class="picture-zmki_px" src="../static/images/mzqly.jpg">
           </a>
-          <div class="m-picture-text">起风了</div>
+          <div class="m-picture-text" th:text="${picture.picturename}">起风了</div>
           <div  class="rcaption">
-            <div style="font-size: large;">起风了</div>
-            <div style="font-size: small" class="m-margin-top">2020-02-02 &nbsp;深圳</div>
-            <p style="font-size: small">我曾难自拔于世界之大，也沉迷于其中梦话</p>
+            <div style="font-size: large;" th:text="${picture.picturename}">起风了</div>
+            <div style="font-size: small" class="m-margin-top" th:text="${picture.picturetime}">2020-02-02 &nbsp;<span th:text="${picture.pictureaddress}">深圳</span></div>
+            <p style="font-size: small" th:text="${picture.picturedescription}">我曾难自拔于世界之大，也沉迷于其中梦话</p>
           </div>
         </div>
       </div>
