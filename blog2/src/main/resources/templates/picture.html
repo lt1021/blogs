@@ -27,11 +27,11 @@
   <!--照片墙-->
   <div id="picture-main">
 
-    <article class="thumb">
+    <article class="thumb" th:each="picture, iterStat : ${pageInfo}">
       <div class="ma5-gallery">
-        <div class="rthumbnail" th:each="picture, iterStat : ${pageInfo}">
-          <a href="../static/images/mzqly.jpg">
-            <img class="picture-zmki_px" src="../static/images/mzqly.jpg">
+        <div class="rthumbnail" >
+          <a href="../static/images/mzqly.jpg" th:href="@{${picture.imagePath}}">
+            <img class="picture-zmki_px" src="../static/images/mzqly.jpg" th:src="@{${picture.imagePath}}">
           </a>
           <div class="m-picture-text" th:text="${picture.picturename}">起风了</div>
           <div  class="rcaption">
@@ -44,10 +44,8 @@
     </article>
 
   </div>
-
   <br>
   <br>
-
   <!--底部footer-->
   <footer th:replace="_fragments :: footer" class="ui inverted vertical segment m-padded-tb-massive">
 

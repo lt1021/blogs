@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.validation.constraints.NotBlank;
+
 /**
  * 照片墙实体类
  */
@@ -16,5 +18,7 @@ public class Picture {
     private String picturetime;//照片时间
     private String pictureaddress;//照片地址
     private String picturedescription;//照片描述
+    @NotBlank(message = "请上传图片")
+    private String imagePath; //图片路径
 
 }
