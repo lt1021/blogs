@@ -1,15 +1,359 @@
-2020-08-05 21:40:35.723  INFO 13844 --- [restartedMain] com.blog.Blog2Application                : Starting Blog2Application on 刘涛 with PID 13844 (E:\IDEAcode\lt\blogs\blog2\target\classes started by 钟意你 in E:\IDEAcode\lt\blogs)
-2020-08-05 21:40:35.744 DEBUG 13844 --- [restartedMain] com.blog.Blog2Application                : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-2020-08-05 21:40:35.745  INFO 13844 --- [restartedMain] com.blog.Blog2Application                : The following profiles are active: dev
-2020-08-05 21:40:36.388  INFO 13844 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2020-08-05 21:40:36.391  INFO 13844 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2020-08-05 21:40:49.089  INFO 13844 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
-2020-08-05 21:40:49.232  INFO 13844 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-08-05 21:40:49.233  INFO 13844 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
-2020-08-05 21:40:50.346  INFO 13844 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-08-05 21:40:50.347  INFO 13844 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 13955 ms
-2020-08-05 21:41:00.350  INFO 13844 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-08-05 21:41:01.515  INFO 13844 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-08-05 21:41:05.349  INFO 13844 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2020-08-05 21:41:06.719  INFO 13844 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
-2020-08-05 21:41:06.851  INFO 13844 --- [restartedMain] com.blog.Blog2Application                : Started Blog2Application in 44.393 seconds (JVM running for 66.178)
+2020-09-19 10:43:24.948  INFO 7580 --- [restartedMain] com.blog.Blog2Application                : Starting Blog2Application on DESKTOP-FF3ENSH with PID 7580 (E:\code\blogs\blog2\target\classes started by Administrator in E:\code\blogs)
+2020-09-19 10:43:24.963 DEBUG 7580 --- [restartedMain] com.blog.Blog2Application                : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-09-19 10:43:24.965  INFO 7580 --- [restartedMain] com.blog.Blog2Application                : The following profiles are active: dev
+2020-09-19 10:43:25.244  INFO 7580 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-09-19 10:43:25.245  INFO 7580 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-09-19 10:43:29.034  INFO 7580 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2020-09-19 10:43:29.049  INFO 7580 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-19 10:43:29.050  INFO 7580 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-09-19 10:43:29.168  INFO 7580 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-09-19 10:43:29.169  INFO 7580 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3923 ms
+2020-09-19 10:43:30.501  INFO 7580 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-19 10:43:30.674  INFO 7580 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-19 10:43:31.385  INFO 7580 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-09-19 10:43:31.460  INFO 7580 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2020-09-19 10:43:31.464  INFO 7580 --- [restartedMain] com.blog.Blog2Application                : Started Blog2Application in 7.643 seconds (JVM running for 11.779)
+2020-09-19 10:44:00.247  INFO 7580 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-19 10:44:00.248  INFO 7580 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-09-19 10:44:00.264  INFO 7580 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+2020-09-19 10:44:00.326  INFO 7580 --- [http-nio-8082-exec-1] com.blog.aspect.LogAspect                : Request: LogAspect.RequestLog(url=http://ltandqly.top:8082/, ip=192.168.0.21, classMethod=com.blog.controller.IndexController.toIndex, args=[1, {}])
+2020-09-19 10:44:00.496  INFO 7580 --- [http-nio-8082-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-09-19 10:44:01.129  INFO 7580 --- [http-nio-8082-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-09-19 10:44:01.137 DEBUG 7580 --- [http-nio-8082-exec-1] com.blog.dao.BlogDao.getIndexBlog_COUNT  : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t, t_user u WHERE b.type_id = t.id AND u.id = b.user_id 
+2020-09-19 10:44:01.176 DEBUG 7580 --- [http-nio-8082-exec-1] com.blog.dao.BlogDao.getIndexBlog_COUNT  : ==> Parameters: 
+2020-09-19 10:44:01.296 DEBUG 7580 --- [http-nio-8082-exec-1] com.blog.dao.BlogDao.getIndexBlog_COUNT  : <==      Total: 1
+2020-09-19 10:44:01.309 DEBUG 7580 --- [http-nio-8082-exec-1] com.blog.dao.BlogDao.getIndexBlog        : ==>  Preparing: /*主页博客展示*/ select b.id, b.title, b.first_picture, b.views, b.update_time, b.description, t.name typename, t.id typeid, u.nickname, u.avatar from t_blog b, t_type t, t_user u where b.type_id = t.id and u.id = b.user_id order by b.update_time desc LIMIT ? 
+2020-09-19 10:44:01.311 DEBUG 7580 --- [http-nio-8082-exec-1] com.blog.dao.BlogDao.getIndexBlog        : ==> Parameters: 8(Integer)
+2020-09-19 10:44:01.327 DEBUG 7580 --- [http-nio-8082-exec-1] com.blog.dao.BlogDao.getIndexBlog        : <==      Total: 8
+2020-09-19 10:44:01.340 DEBUG 7580 --- [http-nio-8082-exec-1] com.blog.dao.TypeDao.getBlogType         : ==>  Preparing: select t.id tid, t.name, b.id bid, b.title, b.type_id from t_type t, t_blog b where t.id = b.type_id 
+2020-09-19 10:44:01.341 DEBUG 7580 --- [http-nio-8082-exec-1] com.blog.dao.TypeDao.getBlogType         : ==> Parameters: 
+2020-09-19 10:44:01.350 DEBUG 7580 --- [http-nio-8082-exec-1] com.blog.dao.TypeDao.getBlogType         : <==      Total: 8
+2020-09-19 10:44:01.352 DEBUG 7580 --- [http-nio-8082-exec-1] com.blog.dao.TagDao.getBlogTag           : ==>  Preparing: select t.id tid, t.name, b.id bid, b.title from t_tag t, t_blog b, t_blog_tags bt where t.id = bt.tag_id and b.id = bt.blog_id 
+2020-09-19 10:44:01.352 DEBUG 7580 --- [http-nio-8082-exec-1] com.blog.dao.TagDao.getBlogTag           : ==> Parameters: 
+2020-09-19 10:44:01.417 DEBUG 7580 --- [http-nio-8082-exec-1] com.blog.dao.TagDao.getBlogTag           : <==      Total: 12
+2020-09-19 10:44:01.418 DEBUG 7580 --- [http-nio-8082-exec-1] c.blog.dao.BlogDao.getAllRecommendBlog   : ==>  Preparing: select id, title, recommend from t_blog order by update_time desc; 
+2020-09-19 10:44:01.419 DEBUG 7580 --- [http-nio-8082-exec-1] c.blog.dao.BlogDao.getAllRecommendBlog   : ==> Parameters: 
+2020-09-19 10:44:01.424 DEBUG 7580 --- [http-nio-8082-exec-1] c.blog.dao.BlogDao.getAllRecommendBlog   : <==      Total: 8
+2020-09-19 10:44:01.427  INFO 7580 --- [http-nio-8082-exec-1] com.blog.aspect.LogAspect                : ------------doAfter------------
+2020-09-19 10:44:01.428  INFO 7580 --- [http-nio-8082-exec-1] com.blog.aspect.LogAspect                : Result: index
+2020-09-19 10:46:14.529  INFO 7580 --- [http-nio-8082-exec-3] com.blog.aspect.LogAspect                : Request: LogAspect.RequestLog(url=http://ltandqly.top:8082/about, ip=192.168.0.21, classMethod=com.blog.controller.AboutShowController.about, args=[])
+2020-09-19 10:46:14.533  INFO 7580 --- [http-nio-8082-exec-3] com.blog.aspect.LogAspect                : ------------doAfter------------
+2020-09-19 10:46:14.533  INFO 7580 --- [http-nio-8082-exec-3] com.blog.aspect.LogAspect                : Result: about
+2020-09-19 10:46:19.551  INFO 7580 --- [http-nio-8082-exec-5] com.blog.aspect.LogAspect                : Request: LogAspect.RequestLog(url=http://ltandqly.top:8082/music, ip=192.168.0.21, classMethod=com.blog.controller.MusicController.music, args=[])
+2020-09-19 10:46:19.559  INFO 7580 --- [http-nio-8082-exec-5] com.blog.aspect.LogAspect                : ------------doAfter------------
+2020-09-19 10:46:19.559  INFO 7580 --- [http-nio-8082-exec-5] com.blog.aspect.LogAspect                : Result: music
+2020-09-19 10:46:22.526  INFO 7580 --- [http-nio-8082-exec-1] com.blog.aspect.LogAspect                : Request: LogAspect.RequestLog(url=http://ltandqly.top:8082/message, ip=192.168.0.21, classMethod=com.blog.controller.MessageController.message, args=[])
+2020-09-19 10:46:22.532  INFO 7580 --- [http-nio-8082-exec-1] com.blog.aspect.LogAspect                : ------------doAfter------------
+2020-09-19 10:46:22.533  INFO 7580 --- [http-nio-8082-exec-1] com.blog.aspect.LogAspect                : Result: message
+2020-09-19 10:46:24.113  INFO 7580 --- [http-nio-8082-exec-2] com.blog.aspect.LogAspect                : Request: LogAspect.RequestLog(url=http://ltandqly.top:8082/picture, ip=192.168.0.21, classMethod=com.blog.controller.PictureController.picture, args=[{}])
+2020-09-19 10:46:24.122 DEBUG 7580 --- [http-nio-8082-exec-2] com.blog.dao.PictureDao.BlogPicture      : ==>  Preparing: select p.id,p.pictureaddress,p.picturedescription, p.picturename,p.picturetime from t_picture p 
+2020-09-19 10:46:24.123 DEBUG 7580 --- [http-nio-8082-exec-2] com.blog.dao.PictureDao.BlogPicture      : ==> Parameters: 
+2020-09-19 10:46:24.143 DEBUG 7580 --- [http-nio-8082-exec-2] com.blog.dao.PictureDao.BlogPicture      : <==      Total: 1
+2020-09-19 10:46:24.144  INFO 7580 --- [http-nio-8082-exec-2] com.blog.aspect.LogAspect                : ------------doAfter------------
+2020-09-19 10:46:24.145  INFO 7580 --- [http-nio-8082-exec-2] com.blog.aspect.LogAspect                : Result: picture
+2020-09-19 10:46:25.329  INFO 7580 --- [http-nio-8082-exec-9] com.blog.aspect.LogAspect                : Request: LogAspect.RequestLog(url=http://ltandqly.top:8082/archives, ip=192.168.0.21, classMethod=com.blog.controller.ArchiveShowController.archives, args=[{}])
+2020-09-19 10:46:25.334 DEBUG 7580 --- [http-nio-8082-exec-9] com.blog.dao.BlogDao.findGroupYear       : ==>  Preparing: select DATE_FORMAT(b.update_time, '%Y') from t_blog b order by b.update_time desc 
+2020-09-19 10:46:25.335 DEBUG 7580 --- [http-nio-8082-exec-9] com.blog.dao.BlogDao.findGroupYear       : ==> Parameters: 
+2020-09-19 10:46:25.341 DEBUG 7580 --- [http-nio-8082-exec-9] com.blog.dao.BlogDao.findGroupYear       : <==      Total: 8
+2020-09-19 10:46:25.346 DEBUG 7580 --- [http-nio-8082-exec-9] com.blog.dao.BlogDao.findByYear          : ==>  Preparing: select b.title, b.update_time, b.id, b.flag from t_blog b where DATE_FORMAT(b.update_time, "%Y") = ? 
+2020-09-19 10:46:25.347 DEBUG 7580 --- [http-nio-8082-exec-9] com.blog.dao.BlogDao.findByYear          : ==> Parameters: 2019(String)
+2020-09-19 10:46:25.352 DEBUG 7580 --- [http-nio-8082-exec-9] com.blog.dao.BlogDao.findByYear          : <==      Total: 1
+2020-09-19 10:46:25.353 DEBUG 7580 --- [http-nio-8082-exec-9] com.blog.dao.BlogDao.findByYear          : ==>  Preparing: select b.title, b.update_time, b.id, b.flag from t_blog b where DATE_FORMAT(b.update_time, "%Y") = ? 
+2020-09-19 10:46:25.354 DEBUG 7580 --- [http-nio-8082-exec-9] com.blog.dao.BlogDao.findByYear          : ==> Parameters: 2020(String)
+2020-09-19 10:46:25.363 DEBUG 7580 --- [http-nio-8082-exec-9] com.blog.dao.BlogDao.findByYear          : <==      Total: 7
+2020-09-19 10:46:25.365 DEBUG 7580 --- [http-nio-8082-exec-9] com.blog.dao.BlogDao.getAllBlog          : ==>  Preparing: /*后台博客展示*/ select b.id, b.title, b.update_time, b.recommend, b.type_id, b.published, t.id typeid, t.name typename from t_blog b, t_type t where b.type_id = t.id /*博客类型id=类型id*/ 
+2020-09-19 10:46:25.365 DEBUG 7580 --- [http-nio-8082-exec-9] com.blog.dao.BlogDao.getAllBlog          : ==> Parameters: 
+2020-09-19 10:46:25.378 DEBUG 7580 --- [http-nio-8082-exec-9] com.blog.dao.BlogDao.getAllBlog          : <==      Total: 8
+2020-09-19 10:46:25.379  INFO 7580 --- [http-nio-8082-exec-9] com.blog.aspect.LogAspect                : ------------doAfter------------
+2020-09-19 10:46:25.379  INFO 7580 --- [http-nio-8082-exec-9] com.blog.aspect.LogAspect                : Result: archives
+2020-09-19 10:46:26.527  INFO 7580 --- [http-nio-8082-exec-7] com.blog.aspect.LogAspect                : Request: LogAspect.RequestLog(url=http://ltandqly.top:8082/tags/-1, ip=192.168.0.21, classMethod=com.blog.controller.TagShowController.types, args=[-1, 1, {}])
+2020-09-19 10:46:26.537 DEBUG 7580 --- [http-nio-8082-exec-7] com.blog.dao.TagDao.getBlogTag_COUNT     : ==>  Preparing: SELECT count(0) FROM t_tag t, t_blog b, t_blog_tags bt WHERE t.id = bt.tag_id AND b.id = bt.blog_id 
+2020-09-19 10:46:26.540 DEBUG 7580 --- [http-nio-8082-exec-7] com.blog.dao.TagDao.getBlogTag_COUNT     : ==> Parameters: 
+2020-09-19 10:46:26.546 DEBUG 7580 --- [http-nio-8082-exec-7] com.blog.dao.TagDao.getBlogTag_COUNT     : <==      Total: 1
+2020-09-19 10:46:26.552 DEBUG 7580 --- [http-nio-8082-exec-7] com.blog.dao.TagDao.getBlogTag           : ==>  Preparing: select t.id tid, t.name, b.id bid, b.title from t_tag t, t_blog b, t_blog_tags bt where t.id = bt.tag_id and b.id = bt.blog_id LIMIT ? 
+2020-09-19 10:46:26.555 DEBUG 7580 --- [http-nio-8082-exec-7] com.blog.dao.TagDao.getBlogTag           : ==> Parameters: 100(Integer)
+2020-09-19 10:46:26.559 DEBUG 7580 --- [http-nio-8082-exec-7] com.blog.dao.TagDao.getBlogTag           : <==      Total: 12
+2020-09-19 10:46:26.564 DEBUG 7580 --- [http-nio-8082-exec-7] com.blog.dao.BlogDao.getByTagId          : ==>  Preparing: select b.id, b.title, b.first_picture, b.views, b.update_time, b.description, t.name typename, t.id typeid, t1.name tagname, t1.id tagid, u.nickname, u.avatar from t_blog b, t_type t, t_user u, t_blog_tags tb, t_tag t1 where b.type_id = t.id and u.id = b.user_id and tb.blog_id = b.id and tb.tag_id = t1.id and t1.id = ? order by b.update_time desc 
+2020-09-19 10:46:26.564 DEBUG 7580 --- [http-nio-8082-exec-7] com.blog.dao.BlogDao.getByTagId          : ==> Parameters: 3(Long)
+2020-09-19 10:46:26.567 DEBUG 7580 --- [http-nio-8082-exec-7] com.blog.dao.BlogDao.getByTagId          : <==      Total: 1
+2020-09-19 10:46:26.569  INFO 7580 --- [http-nio-8082-exec-7] com.blog.aspect.LogAspect                : ------------doAfter------------
+2020-09-19 10:46:26.572  INFO 7580 --- [http-nio-8082-exec-7] com.blog.aspect.LogAspect                : Result: tags
+2020-09-19 10:46:27.618  INFO 7580 --- [http-nio-8082-exec-1] com.blog.aspect.LogAspect                : Request: LogAspect.RequestLog(url=http://ltandqly.top:8082/types/-1, ip=192.168.0.21, classMethod=com.blog.controller.TypeShowController.types, args=[-1, 1, {}])
+2020-09-19 10:46:27.634 DEBUG 7580 --- [http-nio-8082-exec-1] com.blog.dao.TypeDao.getBlogType_COUNT   : ==>  Preparing: SELECT count(0) FROM t_type t, t_blog b WHERE t.id = b.type_id 
+2020-09-19 10:46:27.635 DEBUG 7580 --- [http-nio-8082-exec-1] com.blog.dao.TypeDao.getBlogType_COUNT   : ==> Parameters: 
+2020-09-19 10:46:27.642 DEBUG 7580 --- [http-nio-8082-exec-1] com.blog.dao.TypeDao.getBlogType_COUNT   : <==      Total: 1
+2020-09-19 10:46:27.644 DEBUG 7580 --- [http-nio-8082-exec-1] com.blog.dao.TypeDao.getBlogType         : ==>  Preparing: select t.id tid, t.name, b.id bid, b.title, b.type_id from t_type t, t_blog b where t.id = b.type_id LIMIT ? 
+2020-09-19 10:46:27.645 DEBUG 7580 --- [http-nio-8082-exec-1] com.blog.dao.TypeDao.getBlogType         : ==> Parameters: 100(Integer)
+2020-09-19 10:46:27.649 DEBUG 7580 --- [http-nio-8082-exec-1] com.blog.dao.TypeDao.getBlogType         : <==      Total: 8
+2020-09-19 10:46:27.651 DEBUG 7580 --- [http-nio-8082-exec-1] com.blog.dao.BlogDao.getByTypeId         : ==>  Preparing: select b.id, b.title, b.first_picture, b.views, b.update_time, b.description, t.name typename, t.id typeid, u.nickname, u.avatar from t_blog b, t_type t, t_user u where b.type_id = t.id and u.id = b.user_id and b.type_id = ? order by b.update_time desc 
+2020-09-19 10:46:27.652 DEBUG 7580 --- [http-nio-8082-exec-1] com.blog.dao.BlogDao.getByTypeId         : ==> Parameters: 3(Long)
+2020-09-19 10:46:27.680 DEBUG 7580 --- [http-nio-8082-exec-1] com.blog.dao.BlogDao.getByTypeId         : <==      Total: 2
+2020-09-19 10:46:27.683  INFO 7580 --- [http-nio-8082-exec-1] com.blog.aspect.LogAspect                : ------------doAfter------------
+2020-09-19 10:46:27.683  INFO 7580 --- [http-nio-8082-exec-1] com.blog.aspect.LogAspect                : Result: types
+2020-09-19 10:46:28.584  INFO 7580 --- [http-nio-8082-exec-4] com.blog.aspect.LogAspect                : Request: LogAspect.RequestLog(url=http://ltandqly.top:8082/, ip=192.168.0.21, classMethod=com.blog.controller.IndexController.toIndex, args=[1, {}])
+2020-09-19 10:46:28.601 DEBUG 7580 --- [http-nio-8082-exec-4] com.blog.dao.BlogDao.getIndexBlog_COUNT  : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t, t_user u WHERE b.type_id = t.id AND u.id = b.user_id 
+2020-09-19 10:46:28.601 DEBUG 7580 --- [http-nio-8082-exec-4] com.blog.dao.BlogDao.getIndexBlog_COUNT  : ==> Parameters: 
+2020-09-19 10:46:28.608 DEBUG 7580 --- [http-nio-8082-exec-4] com.blog.dao.BlogDao.getIndexBlog_COUNT  : <==      Total: 1
+2020-09-19 10:46:28.610 DEBUG 7580 --- [http-nio-8082-exec-4] com.blog.dao.BlogDao.getIndexBlog        : ==>  Preparing: /*主页博客展示*/ select b.id, b.title, b.first_picture, b.views, b.update_time, b.description, t.name typename, t.id typeid, u.nickname, u.avatar from t_blog b, t_type t, t_user u where b.type_id = t.id and u.id = b.user_id order by b.update_time desc LIMIT ? 
+2020-09-19 10:46:28.624 DEBUG 7580 --- [http-nio-8082-exec-4] com.blog.dao.BlogDao.getIndexBlog        : ==> Parameters: 8(Integer)
+2020-09-19 10:46:28.653 DEBUG 7580 --- [http-nio-8082-exec-4] com.blog.dao.BlogDao.getIndexBlog        : <==      Total: 8
+2020-09-19 10:46:28.663 DEBUG 7580 --- [http-nio-8082-exec-4] com.blog.dao.TypeDao.getBlogType         : ==>  Preparing: select t.id tid, t.name, b.id bid, b.title, b.type_id from t_type t, t_blog b where t.id = b.type_id 
+2020-09-19 10:46:28.663 DEBUG 7580 --- [http-nio-8082-exec-4] com.blog.dao.TypeDao.getBlogType         : ==> Parameters: 
+2020-09-19 10:46:28.677 DEBUG 7580 --- [http-nio-8082-exec-4] com.blog.dao.TypeDao.getBlogType         : <==      Total: 8
+2020-09-19 10:46:28.682 DEBUG 7580 --- [http-nio-8082-exec-4] com.blog.dao.TagDao.getBlogTag           : ==>  Preparing: select t.id tid, t.name, b.id bid, b.title from t_tag t, t_blog b, t_blog_tags bt where t.id = bt.tag_id and b.id = bt.blog_id 
+2020-09-19 10:46:28.682 DEBUG 7580 --- [http-nio-8082-exec-4] com.blog.dao.TagDao.getBlogTag           : ==> Parameters: 
+2020-09-19 10:46:28.694 DEBUG 7580 --- [http-nio-8082-exec-4] com.blog.dao.TagDao.getBlogTag           : <==      Total: 12
+2020-09-19 10:46:28.698 DEBUG 7580 --- [http-nio-8082-exec-4] c.blog.dao.BlogDao.getAllRecommendBlog   : ==>  Preparing: select id, title, recommend from t_blog order by update_time desc; 
+2020-09-19 10:46:28.698 DEBUG 7580 --- [http-nio-8082-exec-4] c.blog.dao.BlogDao.getAllRecommendBlog   : ==> Parameters: 
+2020-09-19 10:46:28.712 DEBUG 7580 --- [http-nio-8082-exec-4] c.blog.dao.BlogDao.getAllRecommendBlog   : <==      Total: 8
+2020-09-19 10:46:28.713  INFO 7580 --- [http-nio-8082-exec-4] com.blog.aspect.LogAspect                : ------------doAfter------------
+2020-09-19 10:46:28.713  INFO 7580 --- [http-nio-8082-exec-4] com.blog.aspect.LogAspect                : Result: index
+2020-09-19 10:46:29.732  INFO 7580 --- [http-nio-8082-exec-1] com.blog.aspect.LogAspect                : Request: LogAspect.RequestLog(url=http://ltandqly.top:8082/, ip=192.168.0.21, classMethod=com.blog.controller.IndexController.toIndex, args=[1, {}])
+2020-09-19 10:46:29.746 DEBUG 7580 --- [http-nio-8082-exec-1] com.blog.dao.BlogDao.getIndexBlog_COUNT  : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t, t_user u WHERE b.type_id = t.id AND u.id = b.user_id 
+2020-09-19 10:46:29.746 DEBUG 7580 --- [http-nio-8082-exec-1] com.blog.dao.BlogDao.getIndexBlog_COUNT  : ==> Parameters: 
+2020-09-19 10:46:29.747 DEBUG 7580 --- [http-nio-8082-exec-1] com.blog.dao.BlogDao.getIndexBlog_COUNT  : <==      Total: 1
+2020-09-19 10:46:29.747 DEBUG 7580 --- [http-nio-8082-exec-1] com.blog.dao.BlogDao.getIndexBlog        : ==>  Preparing: /*主页博客展示*/ select b.id, b.title, b.first_picture, b.views, b.update_time, b.description, t.name typename, t.id typeid, u.nickname, u.avatar from t_blog b, t_type t, t_user u where b.type_id = t.id and u.id = b.user_id order by b.update_time desc LIMIT ? 
+2020-09-19 10:46:29.748 DEBUG 7580 --- [http-nio-8082-exec-1] com.blog.dao.BlogDao.getIndexBlog        : ==> Parameters: 8(Integer)
+2020-09-19 10:46:29.751 DEBUG 7580 --- [http-nio-8082-exec-1] com.blog.dao.BlogDao.getIndexBlog        : <==      Total: 8
+2020-09-19 10:46:29.752 DEBUG 7580 --- [http-nio-8082-exec-1] com.blog.dao.TypeDao.getBlogType         : ==>  Preparing: select t.id tid, t.name, b.id bid, b.title, b.type_id from t_type t, t_blog b where t.id = b.type_id 
+2020-09-19 10:46:29.752 DEBUG 7580 --- [http-nio-8082-exec-1] com.blog.dao.TypeDao.getBlogType         : ==> Parameters: 
+2020-09-19 10:46:29.757 DEBUG 7580 --- [http-nio-8082-exec-1] com.blog.dao.TypeDao.getBlogType         : <==      Total: 8
+2020-09-19 10:46:29.760 DEBUG 7580 --- [http-nio-8082-exec-1] com.blog.dao.TagDao.getBlogTag           : ==>  Preparing: select t.id tid, t.name, b.id bid, b.title from t_tag t, t_blog b, t_blog_tags bt where t.id = bt.tag_id and b.id = bt.blog_id 
+2020-09-19 10:46:29.761 DEBUG 7580 --- [http-nio-8082-exec-1] com.blog.dao.TagDao.getBlogTag           : ==> Parameters: 
+2020-09-19 10:46:29.765 DEBUG 7580 --- [http-nio-8082-exec-1] com.blog.dao.TagDao.getBlogTag           : <==      Total: 12
+2020-09-19 10:46:29.766 DEBUG 7580 --- [http-nio-8082-exec-1] c.blog.dao.BlogDao.getAllRecommendBlog   : ==>  Preparing: select id, title, recommend from t_blog order by update_time desc; 
+2020-09-19 10:46:29.766 DEBUG 7580 --- [http-nio-8082-exec-1] c.blog.dao.BlogDao.getAllRecommendBlog   : ==> Parameters: 
+2020-09-19 10:46:29.770 DEBUG 7580 --- [http-nio-8082-exec-1] c.blog.dao.BlogDao.getAllRecommendBlog   : <==      Total: 8
+2020-09-19 10:46:29.774  INFO 7580 --- [http-nio-8082-exec-1] com.blog.aspect.LogAspect                : ------------doAfter------------
+2020-09-19 10:46:29.775  INFO 7580 --- [http-nio-8082-exec-1] com.blog.aspect.LogAspect                : Result: index
+2020-09-19 10:46:31.657  INFO 7580 --- [http-nio-8082-exec-9] com.blog.aspect.LogAspect                : Request: LogAspect.RequestLog(url=http://ltandqly.top:8082/archives, ip=192.168.0.21, classMethod=com.blog.controller.ArchiveShowController.archives, args=[{}])
+2020-09-19 10:46:31.661 DEBUG 7580 --- [http-nio-8082-exec-9] com.blog.dao.BlogDao.findGroupYear       : ==>  Preparing: select DATE_FORMAT(b.update_time, '%Y') from t_blog b order by b.update_time desc 
+2020-09-19 10:46:31.663 DEBUG 7580 --- [http-nio-8082-exec-9] com.blog.dao.BlogDao.findGroupYear       : ==> Parameters: 
+2020-09-19 10:46:31.665 DEBUG 7580 --- [http-nio-8082-exec-9] com.blog.dao.BlogDao.findGroupYear       : <==      Total: 8
+2020-09-19 10:46:31.667 DEBUG 7580 --- [http-nio-8082-exec-9] com.blog.dao.BlogDao.findByYear          : ==>  Preparing: select b.title, b.update_time, b.id, b.flag from t_blog b where DATE_FORMAT(b.update_time, "%Y") = ? 
+2020-09-19 10:46:31.667 DEBUG 7580 --- [http-nio-8082-exec-9] com.blog.dao.BlogDao.findByYear          : ==> Parameters: 2019(String)
+2020-09-19 10:46:31.673 DEBUG 7580 --- [http-nio-8082-exec-9] com.blog.dao.BlogDao.findByYear          : <==      Total: 1
+2020-09-19 10:46:31.677 DEBUG 7580 --- [http-nio-8082-exec-9] com.blog.dao.BlogDao.findByYear          : ==>  Preparing: select b.title, b.update_time, b.id, b.flag from t_blog b where DATE_FORMAT(b.update_time, "%Y") = ? 
+2020-09-19 10:46:31.678 DEBUG 7580 --- [http-nio-8082-exec-9] com.blog.dao.BlogDao.findByYear          : ==> Parameters: 2020(String)
+2020-09-19 10:46:31.683 DEBUG 7580 --- [http-nio-8082-exec-9] com.blog.dao.BlogDao.findByYear          : <==      Total: 7
+2020-09-19 10:46:31.684 DEBUG 7580 --- [http-nio-8082-exec-9] com.blog.dao.BlogDao.getAllBlog          : ==>  Preparing: /*后台博客展示*/ select b.id, b.title, b.update_time, b.recommend, b.type_id, b.published, t.id typeid, t.name typename from t_blog b, t_type t where b.type_id = t.id /*博客类型id=类型id*/ 
+2020-09-19 10:46:31.685 DEBUG 7580 --- [http-nio-8082-exec-9] com.blog.dao.BlogDao.getAllBlog          : ==> Parameters: 
+2020-09-19 10:46:31.695 DEBUG 7580 --- [http-nio-8082-exec-9] com.blog.dao.BlogDao.getAllBlog          : <==      Total: 8
+2020-09-19 10:46:31.697  INFO 7580 --- [http-nio-8082-exec-9] com.blog.aspect.LogAspect                : ------------doAfter------------
+2020-09-19 10:46:31.697  INFO 7580 --- [http-nio-8082-exec-9] com.blog.aspect.LogAspect                : Result: archives
+2020-09-19 10:46:33.547  INFO 7580 --- [http-nio-8082-exec-10] com.blog.aspect.LogAspect                : Request: LogAspect.RequestLog(url=http://ltandqly.top:8082/picture, ip=192.168.0.21, classMethod=com.blog.controller.PictureController.picture, args=[{}])
+2020-09-19 10:46:33.549 DEBUG 7580 --- [http-nio-8082-exec-10] com.blog.dao.PictureDao.BlogPicture      : ==>  Preparing: select p.id,p.pictureaddress,p.picturedescription, p.picturename,p.picturetime from t_picture p 
+2020-09-19 10:46:33.550 DEBUG 7580 --- [http-nio-8082-exec-10] com.blog.dao.PictureDao.BlogPicture      : ==> Parameters: 
+2020-09-19 10:46:33.552 DEBUG 7580 --- [http-nio-8082-exec-10] com.blog.dao.PictureDao.BlogPicture      : <==      Total: 1
+2020-09-19 10:46:33.553  INFO 7580 --- [http-nio-8082-exec-10] com.blog.aspect.LogAspect                : ------------doAfter------------
+2020-09-19 10:46:33.553  INFO 7580 --- [http-nio-8082-exec-10] com.blog.aspect.LogAspect                : Result: picture
+2020-09-19 10:46:35.560  INFO 7580 --- [http-nio-8082-exec-8] com.blog.aspect.LogAspect                : Request: LogAspect.RequestLog(url=http://ltandqly.top:8082/archives, ip=192.168.0.21, classMethod=com.blog.controller.ArchiveShowController.archives, args=[{}])
+2020-09-19 10:46:35.562 DEBUG 7580 --- [http-nio-8082-exec-8] com.blog.dao.BlogDao.findGroupYear       : ==>  Preparing: select DATE_FORMAT(b.update_time, '%Y') from t_blog b order by b.update_time desc 
+2020-09-19 10:46:35.563 DEBUG 7580 --- [http-nio-8082-exec-8] com.blog.dao.BlogDao.findGroupYear       : ==> Parameters: 
+2020-09-19 10:46:35.566 DEBUG 7580 --- [http-nio-8082-exec-8] com.blog.dao.BlogDao.findGroupYear       : <==      Total: 8
+2020-09-19 10:46:35.568 DEBUG 7580 --- [http-nio-8082-exec-8] com.blog.dao.BlogDao.findByYear          : ==>  Preparing: select b.title, b.update_time, b.id, b.flag from t_blog b where DATE_FORMAT(b.update_time, "%Y") = ? 
+2020-09-19 10:46:35.568 DEBUG 7580 --- [http-nio-8082-exec-8] com.blog.dao.BlogDao.findByYear          : ==> Parameters: 2019(String)
+2020-09-19 10:46:35.570 DEBUG 7580 --- [http-nio-8082-exec-8] com.blog.dao.BlogDao.findByYear          : <==      Total: 1
+2020-09-19 10:46:35.572 DEBUG 7580 --- [http-nio-8082-exec-8] com.blog.dao.BlogDao.findByYear          : ==>  Preparing: select b.title, b.update_time, b.id, b.flag from t_blog b where DATE_FORMAT(b.update_time, "%Y") = ? 
+2020-09-19 10:46:35.573 DEBUG 7580 --- [http-nio-8082-exec-8] com.blog.dao.BlogDao.findByYear          : ==> Parameters: 2020(String)
+2020-09-19 10:46:35.577 DEBUG 7580 --- [http-nio-8082-exec-8] com.blog.dao.BlogDao.findByYear          : <==      Total: 7
+2020-09-19 10:46:35.579 DEBUG 7580 --- [http-nio-8082-exec-8] com.blog.dao.BlogDao.getAllBlog          : ==>  Preparing: /*后台博客展示*/ select b.id, b.title, b.update_time, b.recommend, b.type_id, b.published, t.id typeid, t.name typename from t_blog b, t_type t where b.type_id = t.id /*博客类型id=类型id*/ 
+2020-09-19 10:46:35.580 DEBUG 7580 --- [http-nio-8082-exec-8] com.blog.dao.BlogDao.getAllBlog          : ==> Parameters: 
+2020-09-19 10:46:35.583 DEBUG 7580 --- [http-nio-8082-exec-8] com.blog.dao.BlogDao.getAllBlog          : <==      Total: 8
+2020-09-19 10:46:35.584  INFO 7580 --- [http-nio-8082-exec-8] com.blog.aspect.LogAspect                : ------------doAfter------------
+2020-09-19 10:46:35.585  INFO 7580 --- [http-nio-8082-exec-8] com.blog.aspect.LogAspect                : Result: archives
+2020-09-19 10:46:37.304  INFO 7580 --- [http-nio-8082-exec-6] com.blog.aspect.LogAspect                : Request: LogAspect.RequestLog(url=http://ltandqly.top:8082/picture, ip=192.168.0.21, classMethod=com.blog.controller.PictureController.picture, args=[{}])
+2020-09-19 10:46:37.306 DEBUG 7580 --- [http-nio-8082-exec-6] com.blog.dao.PictureDao.BlogPicture      : ==>  Preparing: select p.id,p.pictureaddress,p.picturedescription, p.picturename,p.picturetime from t_picture p 
+2020-09-19 10:46:37.306 DEBUG 7580 --- [http-nio-8082-exec-6] com.blog.dao.PictureDao.BlogPicture      : ==> Parameters: 
+2020-09-19 10:46:37.309 DEBUG 7580 --- [http-nio-8082-exec-6] com.blog.dao.PictureDao.BlogPicture      : <==      Total: 1
+2020-09-19 10:46:37.310  INFO 7580 --- [http-nio-8082-exec-6] com.blog.aspect.LogAspect                : ------------doAfter------------
+2020-09-19 10:46:37.310  INFO 7580 --- [http-nio-8082-exec-6] com.blog.aspect.LogAspect                : Result: picture
+2020-09-19 10:46:48.443  INFO 7580 --- [http-nio-8082-exec-3] com.blog.aspect.LogAspect                : Request: LogAspect.RequestLog(url=http://ltandqly.top:8082/types/-1, ip=192.168.0.21, classMethod=com.blog.controller.TypeShowController.types, args=[-1, 1, {}])
+2020-09-19 10:46:48.447 DEBUG 7580 --- [http-nio-8082-exec-3] com.blog.dao.TypeDao.getBlogType_COUNT   : ==>  Preparing: SELECT count(0) FROM t_type t, t_blog b WHERE t.id = b.type_id 
+2020-09-19 10:46:48.447 DEBUG 7580 --- [http-nio-8082-exec-3] com.blog.dao.TypeDao.getBlogType_COUNT   : ==> Parameters: 
+2020-09-19 10:46:48.449 DEBUG 7580 --- [http-nio-8082-exec-3] com.blog.dao.TypeDao.getBlogType_COUNT   : <==      Total: 1
+2020-09-19 10:46:48.450 DEBUG 7580 --- [http-nio-8082-exec-3] com.blog.dao.TypeDao.getBlogType         : ==>  Preparing: select t.id tid, t.name, b.id bid, b.title, b.type_id from t_type t, t_blog b where t.id = b.type_id LIMIT ? 
+2020-09-19 10:46:48.451 DEBUG 7580 --- [http-nio-8082-exec-3] com.blog.dao.TypeDao.getBlogType         : ==> Parameters: 100(Integer)
+2020-09-19 10:46:48.453 DEBUG 7580 --- [http-nio-8082-exec-3] com.blog.dao.TypeDao.getBlogType         : <==      Total: 8
+2020-09-19 10:46:48.454 DEBUG 7580 --- [http-nio-8082-exec-3] com.blog.dao.BlogDao.getByTypeId         : ==>  Preparing: select b.id, b.title, b.first_picture, b.views, b.update_time, b.description, t.name typename, t.id typeid, u.nickname, u.avatar from t_blog b, t_type t, t_user u where b.type_id = t.id and u.id = b.user_id and b.type_id = ? order by b.update_time desc 
+2020-09-19 10:46:48.455 DEBUG 7580 --- [http-nio-8082-exec-3] com.blog.dao.BlogDao.getByTypeId         : ==> Parameters: 3(Long)
+2020-09-19 10:46:48.459 DEBUG 7580 --- [http-nio-8082-exec-3] com.blog.dao.BlogDao.getByTypeId         : <==      Total: 2
+2020-09-19 10:46:48.459  INFO 7580 --- [http-nio-8082-exec-3] com.blog.aspect.LogAspect                : ------------doAfter------------
+2020-09-19 10:46:48.460  INFO 7580 --- [http-nio-8082-exec-3] com.blog.aspect.LogAspect                : Result: types
+2020-09-19 10:46:55.577  INFO 7580 --- [http-nio-8082-exec-7] com.blog.aspect.LogAspect                : Request: LogAspect.RequestLog(url=http://ltandqly.top:8082/picture, ip=192.168.0.21, classMethod=com.blog.controller.PictureController.picture, args=[{}])
+2020-09-19 10:46:55.580 DEBUG 7580 --- [http-nio-8082-exec-7] com.blog.dao.PictureDao.BlogPicture      : ==>  Preparing: select p.id,p.pictureaddress,p.picturedescription, p.picturename,p.picturetime from t_picture p 
+2020-09-19 10:46:55.581 DEBUG 7580 --- [http-nio-8082-exec-7] com.blog.dao.PictureDao.BlogPicture      : ==> Parameters: 
+2020-09-19 10:46:55.584 DEBUG 7580 --- [http-nio-8082-exec-7] com.blog.dao.PictureDao.BlogPicture      : <==      Total: 1
+2020-09-19 10:46:55.585  INFO 7580 --- [http-nio-8082-exec-7] com.blog.aspect.LogAspect                : ------------doAfter------------
+2020-09-19 10:46:55.586  INFO 7580 --- [http-nio-8082-exec-7] com.blog.aspect.LogAspect                : Result: picture
+2020-09-19 10:47:39.643  INFO 7336 --- [restartedMain] com.blog.Blog2Application                : Starting Blog2Application on DESKTOP-FF3ENSH with PID 7336 (E:\code\blogs\blog2\target\classes started by Administrator in E:\code\blogs)
+2020-09-19 10:47:39.649 DEBUG 7336 --- [restartedMain] com.blog.Blog2Application                : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-09-19 10:47:39.650  INFO 7336 --- [restartedMain] com.blog.Blog2Application                : The following profiles are active: dev
+2020-09-19 10:47:39.976  INFO 7336 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-09-19 10:47:39.980  INFO 7336 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-09-19 10:47:47.024  INFO 7336 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2020-09-19 10:47:47.046  INFO 7336 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-19 10:47:47.047  INFO 7336 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-09-19 10:47:47.217  INFO 7336 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-09-19 10:47:47.217  INFO 7336 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 7237 ms
+2020-09-19 10:47:49.245  INFO 7336 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-19 10:47:49.535  INFO 7336 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-19 10:47:50.261  INFO 7336 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-09-19 10:47:50.343  INFO 7336 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2020-09-19 10:47:50.349  INFO 7336 --- [restartedMain] com.blog.Blog2Application                : Started Blog2Application in 13.385 seconds (JVM running for 17.622)
+2020-09-19 10:48:10.128  INFO 7336 --- [http-nio-8082-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-19 10:48:10.128  INFO 7336 --- [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-09-19 10:48:10.152  INFO 7336 --- [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 23 ms
+2020-09-19 10:48:10.212  INFO 7336 --- [http-nio-8082-exec-2] com.blog.aspect.LogAspect                : Request: LogAspect.RequestLog(url=http://ltandqly.top:8082/picture, ip=192.168.0.21, classMethod=com.blog.controller.PictureController.picture, args=[{}])
+2020-09-19 10:48:10.269  INFO 7336 --- [http-nio-8082-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-09-19 10:48:11.028  INFO 7336 --- [http-nio-8082-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-09-19 10:48:11.044 DEBUG 7336 --- [http-nio-8082-exec-2] com.blog.dao.PictureDao.BlogPicture      : ==>  Preparing: select p.id,p.pictureaddress,p.picturedescription, p.picturename,p.picturetime from t_picture p 
+2020-09-19 10:48:11.086 DEBUG 7336 --- [http-nio-8082-exec-2] com.blog.dao.PictureDao.BlogPicture      : ==> Parameters: 
+2020-09-19 10:48:11.151 DEBUG 7336 --- [http-nio-8082-exec-2] com.blog.dao.PictureDao.BlogPicture      : <==      Total: 1
+2020-09-19 10:48:11.175  INFO 7336 --- [http-nio-8082-exec-2] com.blog.aspect.LogAspect                : ------------doAfter------------
+2020-09-19 10:48:11.176  INFO 7336 --- [http-nio-8082-exec-2] com.blog.aspect.LogAspect                : Result: picture
+2020-09-19 12:16:51.476  INFO 7336 --- [http-nio-8082-exec-2] com.blog.aspect.LogAspect                : Request: LogAspect.RequestLog(url=http://ltandqly.top:8082/, ip=192.168.0.21, classMethod=com.blog.controller.IndexController.toIndex, args=[1, {}])
+2020-09-19 12:16:51.745 DEBUG 7336 --- [http-nio-8082-exec-2] com.blog.dao.BlogDao.getIndexBlog_COUNT  : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t, t_user u WHERE b.type_id = t.id AND u.id = b.user_id 
+2020-09-19 12:16:51.746 DEBUG 7336 --- [http-nio-8082-exec-2] com.blog.dao.BlogDao.getIndexBlog_COUNT  : ==> Parameters: 
+2020-09-19 12:16:51.751 DEBUG 7336 --- [http-nio-8082-exec-2] com.blog.dao.BlogDao.getIndexBlog_COUNT  : <==      Total: 1
+2020-09-19 12:16:51.756 DEBUG 7336 --- [http-nio-8082-exec-2] com.blog.dao.BlogDao.getIndexBlog        : ==>  Preparing: /*主页博客展示*/ select b.id, b.title, b.first_picture, b.views, b.update_time, b.description, t.name typename, t.id typeid, u.nickname, u.avatar from t_blog b, t_type t, t_user u where b.type_id = t.id and u.id = b.user_id order by b.update_time desc LIMIT ? 
+2020-09-19 12:16:51.757 DEBUG 7336 --- [http-nio-8082-exec-2] com.blog.dao.BlogDao.getIndexBlog        : ==> Parameters: 8(Integer)
+2020-09-19 12:16:51.797 DEBUG 7336 --- [http-nio-8082-exec-2] com.blog.dao.BlogDao.getIndexBlog        : <==      Total: 8
+2020-09-19 12:16:51.805 DEBUG 7336 --- [http-nio-8082-exec-2] com.blog.dao.TypeDao.getBlogType         : ==>  Preparing: select t.id tid, t.name, b.id bid, b.title, b.type_id from t_type t, t_blog b where t.id = b.type_id 
+2020-09-19 12:16:51.806 DEBUG 7336 --- [http-nio-8082-exec-2] com.blog.dao.TypeDao.getBlogType         : ==> Parameters: 
+2020-09-19 12:16:51.813 DEBUG 7336 --- [http-nio-8082-exec-2] com.blog.dao.TypeDao.getBlogType         : <==      Total: 8
+2020-09-19 12:16:51.814 DEBUG 7336 --- [http-nio-8082-exec-2] com.blog.dao.TagDao.getBlogTag           : ==>  Preparing: select t.id tid, t.name, b.id bid, b.title from t_tag t, t_blog b, t_blog_tags bt where t.id = bt.tag_id and b.id = bt.blog_id 
+2020-09-19 12:16:51.815 DEBUG 7336 --- [http-nio-8082-exec-2] com.blog.dao.TagDao.getBlogTag           : ==> Parameters: 
+2020-09-19 12:16:51.819 DEBUG 7336 --- [http-nio-8082-exec-2] com.blog.dao.TagDao.getBlogTag           : <==      Total: 12
+2020-09-19 12:16:51.822 DEBUG 7336 --- [http-nio-8082-exec-2] c.blog.dao.BlogDao.getAllRecommendBlog   : ==>  Preparing: select id, title, recommend from t_blog order by update_time desc; 
+2020-09-19 12:16:51.822 DEBUG 7336 --- [http-nio-8082-exec-2] c.blog.dao.BlogDao.getAllRecommendBlog   : ==> Parameters: 
+2020-09-19 12:16:51.828 DEBUG 7336 --- [http-nio-8082-exec-2] c.blog.dao.BlogDao.getAllRecommendBlog   : <==      Total: 8
+2020-09-19 12:16:51.830  INFO 7336 --- [http-nio-8082-exec-2] com.blog.aspect.LogAspect                : ------------doAfter------------
+2020-09-19 12:16:51.831  INFO 7336 --- [http-nio-8082-exec-2] com.blog.aspect.LogAspect                : Result: index
+2020-09-19 12:16:55.427  INFO 7336 --- [http-nio-8082-exec-4] com.blog.aspect.LogAspect                : Request: LogAspect.RequestLog(url=http://ltandqly.top:8082/picture, ip=192.168.0.21, classMethod=com.blog.controller.PictureController.picture, args=[{}])
+2020-09-19 12:16:55.441 DEBUG 7336 --- [http-nio-8082-exec-4] com.blog.dao.PictureDao.BlogPicture      : ==>  Preparing: select p.id,p.pictureaddress,p.picturedescription, p.picturename,p.picturetime from t_picture p 
+2020-09-19 12:16:55.442 DEBUG 7336 --- [http-nio-8082-exec-4] com.blog.dao.PictureDao.BlogPicture      : ==> Parameters: 
+2020-09-19 12:16:55.447 DEBUG 7336 --- [http-nio-8082-exec-4] com.blog.dao.PictureDao.BlogPicture      : <==      Total: 1
+2020-09-19 12:16:55.448  INFO 7336 --- [http-nio-8082-exec-4] com.blog.aspect.LogAspect                : ------------doAfter------------
+2020-09-19 12:16:55.449  INFO 7336 --- [http-nio-8082-exec-4] com.blog.aspect.LogAspect                : Result: picture
+2020-09-19 12:19:14.421  INFO 8992 --- [restartedMain] com.blog.Blog2Application                : Starting Blog2Application on DESKTOP-FF3ENSH with PID 8992 (E:\code\blogs\blog2\target\classes started by Administrator in E:\code\blogs)
+2020-09-19 12:19:14.472 DEBUG 8992 --- [restartedMain] com.blog.Blog2Application                : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-09-19 12:19:14.473  INFO 8992 --- [restartedMain] com.blog.Blog2Application                : The following profiles are active: dev
+2020-09-19 12:19:14.748  INFO 8992 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-09-19 12:19:14.749  INFO 8992 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-09-19 12:19:19.862  INFO 8992 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2020-09-19 12:19:19.883  INFO 8992 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-19 12:19:19.884  INFO 8992 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-09-19 12:19:20.059  INFO 8992 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-09-19 12:19:20.060  INFO 8992 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5311 ms
+2020-09-19 12:19:23.395  INFO 8992 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-19 12:19:24.013  INFO 8992 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-19 12:19:25.248  INFO 8992 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-09-19 12:19:25.508  INFO 8992 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2020-09-19 12:19:25.522  INFO 8992 --- [restartedMain] com.blog.Blog2Application                : Started Blog2Application in 13.0 seconds (JVM running for 16.53)
+2020-09-19 12:20:26.872  INFO 8992 --- [http-nio-8082-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-19 12:20:26.874  INFO 8992 --- [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-09-19 12:20:26.913  INFO 8992 --- [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 38 ms
+2020-09-19 12:20:27.012  INFO 8992 --- [http-nio-8082-exec-2] com.blog.aspect.LogAspect                : Request: LogAspect.RequestLog(url=http://ltandqly.top:8082/picture, ip=192.168.0.21, classMethod=com.blog.controller.PictureController.picture, args=[{}])
+2020-09-19 12:20:27.127  INFO 8992 --- [http-nio-8082-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-09-19 12:20:28.264  INFO 8992 --- [http-nio-8082-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-09-19 12:20:28.284 DEBUG 8992 --- [http-nio-8082-exec-2] com.blog.dao.PictureDao.BlogPicture      : ==>  Preparing: select p.id,p.pictureaddress,p.picturedescription, p.picturename,p.picturetime from t_picture p 
+2020-09-19 12:20:28.369 DEBUG 8992 --- [http-nio-8082-exec-2] com.blog.dao.PictureDao.BlogPicture      : ==> Parameters: 
+2020-09-19 12:20:28.449 DEBUG 8992 --- [http-nio-8082-exec-2] com.blog.dao.PictureDao.BlogPicture      : <==      Total: 1
+2020-09-19 12:20:28.540  INFO 8992 --- [http-nio-8082-exec-2] com.blog.aspect.LogAspect                : ------------doAfter------------
+2020-09-19 12:20:28.545  INFO 8992 --- [http-nio-8082-exec-2] com.blog.aspect.LogAspect                : Result: picture
+2020-09-19 12:21:35.442  INFO 8992 --- [http-nio-8082-exec-10] com.blog.aspect.LogAspect                : Request: LogAspect.RequestLog(url=http://ltandqly.top:8082/picture, ip=192.168.0.21, classMethod=com.blog.controller.PictureController.picture, args=[{}])
+2020-09-19 12:21:35.448 DEBUG 8992 --- [http-nio-8082-exec-10] com.blog.dao.PictureDao.BlogPicture      : ==>  Preparing: select p.id,p.pictureaddress,p.picturedescription, p.picturename,p.picturetime from t_picture p 
+2020-09-19 12:21:35.449 DEBUG 8992 --- [http-nio-8082-exec-10] com.blog.dao.PictureDao.BlogPicture      : ==> Parameters: 
+2020-09-19 12:21:35.451 DEBUG 8992 --- [http-nio-8082-exec-10] com.blog.dao.PictureDao.BlogPicture      : <==      Total: 1
+2020-09-19 12:21:35.452  INFO 8992 --- [http-nio-8082-exec-10] com.blog.aspect.LogAspect                : ------------doAfter------------
+2020-09-19 12:21:35.452  INFO 8992 --- [http-nio-8082-exec-10] com.blog.aspect.LogAspect                : Result: picture
+2020-09-19 12:21:37.933  INFO 8992 --- [http-nio-8082-exec-6] com.blog.aspect.LogAspect                : Request: LogAspect.RequestLog(url=http://ltandqly.top:8082/picture, ip=192.168.0.21, classMethod=com.blog.controller.PictureController.picture, args=[{}])
+2020-09-19 12:21:37.934 DEBUG 8992 --- [http-nio-8082-exec-6] com.blog.dao.PictureDao.BlogPicture      : ==>  Preparing: select p.id,p.pictureaddress,p.picturedescription, p.picturename,p.picturetime from t_picture p 
+2020-09-19 12:21:37.935 DEBUG 8992 --- [http-nio-8082-exec-6] com.blog.dao.PictureDao.BlogPicture      : ==> Parameters: 
+2020-09-19 12:21:37.936 DEBUG 8992 --- [http-nio-8082-exec-6] com.blog.dao.PictureDao.BlogPicture      : <==      Total: 1
+2020-09-19 12:21:37.936  INFO 8992 --- [http-nio-8082-exec-6] com.blog.aspect.LogAspect                : ------------doAfter------------
+2020-09-19 12:21:37.937  INFO 8992 --- [http-nio-8082-exec-6] com.blog.aspect.LogAspect                : Result: picture
+2020-09-19 12:22:55.291  INFO 176 --- [restartedMain] com.blog.Blog2Application                : Starting Blog2Application on DESKTOP-FF3ENSH with PID 176 (E:\code\blogs\blog2\target\classes started by Administrator in E:\code\blogs)
+2020-09-19 12:22:55.318 DEBUG 176 --- [restartedMain] com.blog.Blog2Application                : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-09-19 12:22:55.319  INFO 176 --- [restartedMain] com.blog.Blog2Application                : The following profiles are active: dev
+2020-09-19 12:22:55.631  INFO 176 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-09-19 12:22:55.632  INFO 176 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-09-19 12:22:59.703  INFO 176 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2020-09-19 12:22:59.720  INFO 176 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-19 12:22:59.721  INFO 176 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-09-19 12:22:59.883  INFO 176 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-09-19 12:22:59.883  INFO 176 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4250 ms
+2020-09-19 12:23:01.349  INFO 176 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-19 12:23:01.534  INFO 176 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-19 12:23:02.155  INFO 176 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-09-19 12:23:02.229  INFO 176 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2020-09-19 12:23:02.234  INFO 176 --- [restartedMain] com.blog.Blog2Application                : Started Blog2Application in 8.831 seconds (JVM running for 11.333)
+2020-09-19 12:25:11.035  INFO 176 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-19 12:25:11.035  INFO 176 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-09-19 12:25:11.083  INFO 176 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 46 ms
+2020-09-19 12:25:11.198  INFO 176 --- [http-nio-8082-exec-1] com.blog.aspect.LogAspect                : Request: LogAspect.RequestLog(url=http://ltandqly.top:8082/picture, ip=192.168.0.21, classMethod=com.blog.controller.PictureController.picture, args=[{}])
+2020-09-19 12:25:11.347  INFO 176 --- [http-nio-8082-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-09-19 12:25:12.143  INFO 176 --- [http-nio-8082-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-09-19 12:25:12.163 DEBUG 176 --- [http-nio-8082-exec-1] com.blog.dao.PictureDao.BlogPicture      : ==>  Preparing: select p.id,p.pictureaddress,p.picturedescription, p.picturename,p.picturetime from t_picture p 
+2020-09-19 12:25:12.229 DEBUG 176 --- [http-nio-8082-exec-1] com.blog.dao.PictureDao.BlogPicture      : ==> Parameters: 
+2020-09-19 12:25:12.294 DEBUG 176 --- [http-nio-8082-exec-1] com.blog.dao.PictureDao.BlogPicture      : <==      Total: 1
+2020-09-19 12:25:12.318  INFO 176 --- [http-nio-8082-exec-1] com.blog.aspect.LogAspect                : ------------doAfter------------
+2020-09-19 12:25:12.319  INFO 176 --- [http-nio-8082-exec-1] com.blog.aspect.LogAspect                : Result: picture
+2020-09-19 12:25:19.099  INFO 176 --- [http-nio-8082-exec-6] com.blog.aspect.LogAspect                : Request: LogAspect.RequestLog(url=http://ltandqly.top:8082/picture, ip=192.168.0.21, classMethod=com.blog.controller.PictureController.picture, args=[{}])
+2020-09-19 12:25:19.102 DEBUG 176 --- [http-nio-8082-exec-6] com.blog.dao.PictureDao.BlogPicture      : ==>  Preparing: select p.id,p.pictureaddress,p.picturedescription, p.picturename,p.picturetime from t_picture p 
+2020-09-19 12:25:19.103 DEBUG 176 --- [http-nio-8082-exec-6] com.blog.dao.PictureDao.BlogPicture      : ==> Parameters: 
+2020-09-19 12:25:19.107 DEBUG 176 --- [http-nio-8082-exec-6] com.blog.dao.PictureDao.BlogPicture      : <==      Total: 1
+2020-09-19 12:25:19.109  INFO 176 --- [http-nio-8082-exec-6] com.blog.aspect.LogAspect                : ------------doAfter------------
+2020-09-19 12:25:19.110  INFO 176 --- [http-nio-8082-exec-6] com.blog.aspect.LogAspect                : Result: picture
+2020-09-19 12:26:59.619  INFO 7604 --- [restartedMain] com.blog.Blog2Application                : Starting Blog2Application on DESKTOP-FF3ENSH with PID 7604 (E:\code\blogs\blog2\target\classes started by Administrator in E:\code\blogs)
+2020-09-19 12:26:59.635 DEBUG 7604 --- [restartedMain] com.blog.Blog2Application                : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-09-19 12:26:59.635  INFO 7604 --- [restartedMain] com.blog.Blog2Application                : The following profiles are active: dev
+2020-09-19 12:26:59.803  INFO 7604 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-09-19 12:26:59.803  INFO 7604 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-09-19 12:27:03.242  INFO 7604 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2020-09-19 12:27:03.256  INFO 7604 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-19 12:27:03.256  INFO 7604 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-09-19 12:27:03.364  INFO 7604 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-09-19 12:27:03.365  INFO 7604 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3561 ms
+2020-09-19 12:27:04.683  INFO 7604 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-19 12:27:04.850  INFO 7604 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-19 12:27:05.357  INFO 7604 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-09-19 12:27:05.414  INFO 7604 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2020-09-19 12:27:05.418  INFO 7604 --- [restartedMain] com.blog.Blog2Application                : Started Blog2Application in 6.979 seconds (JVM running for 9.246)
+2020-09-19 12:27:25.244  INFO 7604 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-19 12:27:25.245  INFO 7604 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-09-19 12:27:25.265  INFO 7604 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 20 ms
+2020-09-19 12:27:25.329  INFO 7604 --- [http-nio-8082-exec-1] com.blog.aspect.LogAspect                : Request: LogAspect.RequestLog(url=http://ltandqly.top:8082/, ip=192.168.0.21, classMethod=com.blog.controller.IndexController.toIndex, args=[1, {}])
+2020-09-19 12:27:25.434  INFO 7604 --- [http-nio-8082-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-09-19 12:27:25.884  INFO 7604 --- [http-nio-8082-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-09-19 12:27:25.892 DEBUG 7604 --- [http-nio-8082-exec-1] com.blog.dao.BlogDao.getIndexBlog_COUNT  : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t, t_user u WHERE b.type_id = t.id AND u.id = b.user_id 
+2020-09-19 12:27:25.916 DEBUG 7604 --- [http-nio-8082-exec-1] com.blog.dao.BlogDao.getIndexBlog_COUNT  : ==> Parameters: 
+2020-09-19 12:27:25.942 DEBUG 7604 --- [http-nio-8082-exec-1] com.blog.dao.BlogDao.getIndexBlog_COUNT  : <==      Total: 1
+2020-09-19 12:27:25.950 DEBUG 7604 --- [http-nio-8082-exec-1] com.blog.dao.BlogDao.getIndexBlog        : ==>  Preparing: /*主页博客展示*/ select b.id, b.title, b.first_picture, b.views, b.update_time, b.description, t.name typename, t.id typeid, u.nickname, u.avatar from t_blog b, t_type t, t_user u where b.type_id = t.id and u.id = b.user_id order by b.update_time desc LIMIT ? 
+2020-09-19 12:27:25.950 DEBUG 7604 --- [http-nio-8082-exec-1] com.blog.dao.BlogDao.getIndexBlog        : ==> Parameters: 8(Integer)
+2020-09-19 12:27:25.963 DEBUG 7604 --- [http-nio-8082-exec-1] com.blog.dao.BlogDao.getIndexBlog        : <==      Total: 8
+2020-09-19 12:27:25.970 DEBUG 7604 --- [http-nio-8082-exec-1] com.blog.dao.TypeDao.getBlogType         : ==>  Preparing: select t.id tid, t.name, b.id bid, b.title, b.type_id from t_type t, t_blog b where t.id = b.type_id 
+2020-09-19 12:27:25.971 DEBUG 7604 --- [http-nio-8082-exec-1] com.blog.dao.TypeDao.getBlogType         : ==> Parameters: 
+2020-09-19 12:27:25.976 DEBUG 7604 --- [http-nio-8082-exec-1] com.blog.dao.TypeDao.getBlogType         : <==      Total: 8
+2020-09-19 12:27:25.977 DEBUG 7604 --- [http-nio-8082-exec-1] com.blog.dao.TagDao.getBlogTag           : ==>  Preparing: select t.id tid, t.name, b.id bid, b.title from t_tag t, t_blog b, t_blog_tags bt where t.id = bt.tag_id and b.id = bt.blog_id 
+2020-09-19 12:27:25.978 DEBUG 7604 --- [http-nio-8082-exec-1] com.blog.dao.TagDao.getBlogTag           : ==> Parameters: 
+2020-09-19 12:27:25.981 DEBUG 7604 --- [http-nio-8082-exec-1] com.blog.dao.TagDao.getBlogTag           : <==      Total: 12
+2020-09-19 12:27:25.982 DEBUG 7604 --- [http-nio-8082-exec-1] c.blog.dao.BlogDao.getAllRecommendBlog   : ==>  Preparing: select id, title, recommend from t_blog order by update_time desc; 
+2020-09-19 12:27:25.983 DEBUG 7604 --- [http-nio-8082-exec-1] c.blog.dao.BlogDao.getAllRecommendBlog   : ==> Parameters: 
+2020-09-19 12:27:25.989 DEBUG 7604 --- [http-nio-8082-exec-1] c.blog.dao.BlogDao.getAllRecommendBlog   : <==      Total: 8
+2020-09-19 12:27:25.994  INFO 7604 --- [http-nio-8082-exec-1] com.blog.aspect.LogAspect                : ------------doAfter------------
+2020-09-19 12:27:25.995  INFO 7604 --- [http-nio-8082-exec-1] com.blog.aspect.LogAspect                : Result: index
+2020-09-19 12:27:28.995  INFO 7604 --- [http-nio-8082-exec-8] com.blog.aspect.LogAspect                : Request: LogAspect.RequestLog(url=http://ltandqly.top:8082/picture, ip=192.168.0.21, classMethod=com.blog.controller.PictureController.picture, args=[{}])
+2020-09-19 12:27:29.029 DEBUG 7604 --- [http-nio-8082-exec-8] com.blog.dao.PictureDao.BlogPicture      : ==>  Preparing: select p.id,p.pictureaddress,p.picturedescription, p.picturename,p.picturetime from t_picture p 
+2020-09-19 12:27:29.030 DEBUG 7604 --- [http-nio-8082-exec-8] com.blog.dao.PictureDao.BlogPicture      : ==> Parameters: 
+2020-09-19 12:27:29.035 DEBUG 7604 --- [http-nio-8082-exec-8] com.blog.dao.PictureDao.BlogPicture      : <==      Total: 1
+2020-09-19 12:27:29.036  INFO 7604 --- [http-nio-8082-exec-8] com.blog.aspect.LogAspect                : ------------doAfter------------
+2020-09-19 12:27:29.037  INFO 7604 --- [http-nio-8082-exec-8] com.blog.aspect.LogAspect                : Result: picture
+2020-09-19 12:27:49.734  INFO 7604 --- [http-nio-8082-exec-4] com.blog.aspect.LogAspect                : Request: LogAspect.RequestLog(url=http://ltandqly.top:8082/picture, ip=192.168.0.21, classMethod=com.blog.controller.PictureController.picture, args=[{}])
+2020-09-19 12:27:56.524 DEBUG 7604 --- [http-nio-8082-exec-4] com.blog.dao.PictureDao.BlogPicture      : ==>  Preparing: select p.id,p.pictureaddress,p.picturedescription, p.picturename,p.picturetime from t_picture p 
+2020-09-19 12:27:56.527 DEBUG 7604 --- [http-nio-8082-exec-4] com.blog.dao.PictureDao.BlogPicture      : ==> Parameters: 
+2020-09-19 12:27:56.541 DEBUG 7604 --- [http-nio-8082-exec-4] com.blog.dao.PictureDao.BlogPicture      : <==      Total: 1
+2020-09-19 12:28:43.093  WARN 7604 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=46s576ms306µs209ns).
+2020-09-19 12:28:43.095  INFO 7604 --- [http-nio-8082-exec-4] com.blog.aspect.LogAspect                : ------------doAfter------------
+2020-09-19 12:28:43.097  INFO 7604 --- [http-nio-8082-exec-4] com.blog.aspect.LogAspect                : Result: picture

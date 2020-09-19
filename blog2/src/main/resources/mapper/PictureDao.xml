@@ -4,7 +4,7 @@
 
     <select id="BlogPicture" resultType="Picture">
         select p.id,p.pictureaddress,p.picturedescription,
-               p.picturename,p.picturetime
+               p.picturename,p.picturetime,p.imagePath
         from t_picture p
     </select>
 </mapper>
