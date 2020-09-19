@@ -13,19 +13,19 @@ public interface PictureService<T> {
      * @return
      */
     @ApiModelProperty("根据id查询")
-    T queryPictureById(Integer id);
+    Picture get(Integer id);
 
     @ApiModelProperty("根据id修改")
-    long updatePictureById(T t);
+    long updatePictureById(Picture t);
 
     @ApiModelProperty("根据id删除")
     long detelePictureById(Integer id);
 
     @ApiModelProperty("根据id添加")
-    long insert(T t);
+    long insert(Picture  t);
 
     @ApiModelProperty("查询全部")
-    List<Picture> BlogPicture();
+    List<T> BlogPicture();
 
 
 }

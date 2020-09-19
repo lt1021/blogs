@@ -10,4 +10,12 @@ import java.util.List;
 public interface PictureDao {
 
     List<Picture> BlogPicture();
+
+    int insertPicture(Picture picture);
+
+    Picture query();
+
+    long update(Picture picture);
+
+    long detele(Integer id);
 }

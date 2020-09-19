@@ -37,18 +37,23 @@ public class PictureController {
     @PostMapping("/picture/insertOrUpdate")
     @ApiOperation(value = "添加一张照片记录")
     public String insertImage(@Valid Picture picture, RedirectAttributes attributes){
-
-        if ( pictureService.insert(picture) ==1) {
-
+        if (pictureService.get(picture.getId())!= null ){
+            pictureService.updatePictureById(picture);
+            attributes.addFlashAttribute("msg", "修改成功");
+        }else {
+            if ( pictureService.insert(picture) == 0  ) {
+                attributes.addFlashAttribute("msg", "新增失败");
+            }
+            attributes.addFlashAttribute("msg", "新增成功");
         }
-        attributes.addFlashAttribute("msg", "新增成功");
         return "redirect :/admin/picture";
     }
 
-    @DeleteMapping("/picture/delete")
+    @DeleteMapping("/picture/delete/{id}")
     @ApiOperation(value = "删除一张照片记录")
-    public String deleteImage(@Valid Picture picture){
-
-        return null;
+    public String deleteImage(@PathVariable Integer id,RedirectAttributes attributes){
+        pictureService.detelePictureById(id);
+        attributes.addFlashAttribute("msg","图片删除成功");
+        return "redirect :/admin/picture";
     }
 }

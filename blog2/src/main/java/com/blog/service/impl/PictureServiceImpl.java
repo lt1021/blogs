@@ -15,23 +15,26 @@ public class PictureServiceImpl  implements PictureService {
     private PictureDao pictureDao;
 
     @Override
-    public Object queryPictureById(Integer id) {
-        return null;
+    public Picture get(Integer id) {
+        return  pictureDao.query();
     }
 
     @Override
-    public long updatePictureById(Object o) {
-        return 0;
+    public long updatePictureById(Picture picture) {
+        return pictureDao.update(picture);
     }
 
     @Override
     public long detelePictureById(Integer id) {
-        return 0;
+
+        return pictureDao.detele(id);
     }
 
+
+
     @Override
-    public long insert(Object o) {
-        return 0;
+    public long insert(Picture picture) {
+        return pictureDao.insertPicture(picture);
     }
 
     @Override
