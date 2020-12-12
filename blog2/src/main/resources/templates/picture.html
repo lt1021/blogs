@@ -19,6 +19,7 @@
   <!--顶部图片-->
   <div class="m-bg-type_outer" style="width: 100%;height: 40%">
     <img src="../static/images/qly1.png" th:src="@{/images/qly1.png}" alt="" class="ui m-bg image" style="width: 296px;height: 391px">
+    <!--<img src="../static/images/qly1.png" th:src="@{/images/qly1.png}" alt="" class="ui m-bg image" style="width: 100%;;height: 100%;">-->
     <div class="m-bg-class_cover">
       <div class="ui container" style="position: relative ;bottom: -540px;">
         <div class="m-font-size-title m-right-bottom" align="center" style="font-family:'STXingkai'">照片墙</div>
@@ -26,16 +27,19 @@
       </div>
     </div>
   </div>
+
+
+
+
   <!--照片墙-->
   <div id="picture-main">
-
-    <article class="thumb" th:each="picture, iterStat : ${pageInfo}">
+    <article class="thumb" th:each="picture : ${pictures}">
       <div class="ma5-gallery">
         <div class="rthumbnail" >
           <a href="../static/images/mzqly.jpg" th:href="@{${picture.imagePath}}">
-            <img class="picture-zmki_px" src="../static/images/mzqly.jpg" th:src="@{${picture.imagePath}}">
+            <img class="picture-zmki_px ui m-bg image" src="../static/images/mzqly.jpg"  style="width: 296px;height: 391px" th:src="@{${picture.imagePath}}" >
           </a>
-          <div class="m-picture-text" th:text="${picture.picturename}">数据不见了</div>
+          <div class="m-picture-text" th:text="${picture.picturename}" >数据不见了</div>
           <div  class="rcaption">
             <div style="font-size: large;" th:text="${picture.picturename}">数据不见了</div>
             <div style="font-size: small" class="m-margin-top" th:text="${picture.picturetime}">数据不见了 &nbsp;<span th:text="${picture.pictureaddress}">数据不见了</span></div>
@@ -44,7 +48,6 @@
         </div>
       </div>
     </article>
-
   </div>
   <br>
   <br>
