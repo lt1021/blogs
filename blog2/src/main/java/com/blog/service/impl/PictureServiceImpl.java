@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class PictureServiceImpl  implements PictureService {
+public class PictureServiceImpl   implements PictureService<Picture> {
     @Autowired
     private PictureDao pictureDao;
 
