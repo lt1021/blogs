@@ -17,7 +17,7 @@ import java.util.List;
 /**
  * 照片墙
  */
-@Controller()
+@RestController()
 @RequestMapping("/admin")
 public class PictureController {
     @Autowired
