@@ -25,13 +25,13 @@ public class PictureController {
     @GetMapping("/picture")
     @ApiOperation(value = "查询所有照片")
     public String picture(Model model,
-                          @PathVariable Long id, @RequestParam(required = false,defaultValue = "1",value = "pagenum")int pagenum){
+                         /* @PathVariable Long id,*/ @RequestParam(required = false,defaultValue = "1",value = "pagenum")int pagenum){
         PageHelper.startPage(pagenum, 5);  //开启分页
         List<Picture> pictures = pictureService.BlogPicture();
         PageInfo<Picture> pageInfo = new PageInfo<>(pictures);
         model.addAttribute("pageInfo",pageInfo);
         model.addAttribute("pictures",pictures);
-        return "picture";
+        return "/admin/picture";
     }
 
 
