@@ -19,6 +19,6 @@ public class Picture {
     private String pictureaddress;//照片地址
     private String picturedescription;//照片描述
     @NotBlank(message = "请上传图片")
-    private Object imagePath; //图片路径
+    private String imagePath; //图片路径
 
 }

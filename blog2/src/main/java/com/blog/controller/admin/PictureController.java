@@ -28,9 +28,9 @@ public class PictureController {
     @Autowired
     private PictureService pictureService;
 
-    /**上传地址*/
-    @Value("${file.upload.path}")
-    private String filePath;
+//    /**上传地址*/
+//    @Value("${file.upload.path}")
+//    private String filePath;
 
     @GetMapping("/pictures")
     @ApiOperation(value = "查询所有照片")
@@ -45,30 +45,6 @@ public class PictureController {
     }
 
 
-    // 执行上传
-    @RequestMapping("upload")
-    public String upload(@RequestParam("file") MultipartFile file, Model model) {
-        // 获取上传文件名
-        String filename = file.getOriginalFilename();
-        // 定义上传文件保存路径
-        String path = filePath+"rotPhoto/";
-        // 新建文件
-        File filepath = new File(path, filename);
-        // 判断路径是否存在，如果不存在就创建一个
-        if (!filepath.getParentFile().exists()) {
-            filepath.getParentFile().mkdirs();
-        }
-        try {
-            // 写入文件
-            file.transferTo(new File(path + File.separator + filename));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        // 将src路径发送至html页面
-        model.addAttribute("filename", "/images/rotPhoto/"+filename);
-        return "Page";
-    }
-
 
     @GetMapping("/pictures/input")
     @ApiOperation(value = "跳转添加")
@@ -80,8 +56,26 @@ public class PictureController {
 
     @PostMapping("/picture/insertOrUpdate")
     @ApiOperation(value = "添加一张照片记录")
-    public String insertImage(@Valid Picture picture, RedirectAttributes attributes){
-        if (pictureService.get(picture.getId())!= null ){
+    public String insertImage(@Valid Picture picture/*,@RequestParam("file") MultipartFile file*/, RedirectAttributes attributes){
+//        // 获取上传文件名
+//        String filename = file.getOriginalFilename();
+//        // 定义上传文件保存路径
+//        String path = "C:/Users/Administrator/Pictures";
+//        // 新建文件
+//        File filepath = new File(path, filename);
+//        // 判断路径是否存在，如果不存在就创建一个
+//        if (!filepath.getParentFile().exists()) {
+//            filepath.getParentFile().mkdirs();
+//        }
+//        try {
+//            // 写入文件
+//            file.transferTo(new File(path + File.separator + filename));
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//        picture.setImagePath(filename);
+//
+        if (pictureService.get(picture.getId())!= null&& picture.getId()!=null){
             pictureService.updatePictureById(picture);
             attributes.addFlashAttribute("msg", "修改成功");
         }else {

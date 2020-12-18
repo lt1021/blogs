@@ -15,6 +15,8 @@ public interface PictureDao {
 
     Picture query();
 
+    Picture get(Integer id);
+
     long update(Picture picture);
 
     long detele(Integer id);

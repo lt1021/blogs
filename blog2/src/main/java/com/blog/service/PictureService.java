@@ -15,6 +15,8 @@ public interface PictureService<T> {
     @ApiModelProperty("根据id查询")
     Picture get(Integer id);
 
+    Picture query(Integer id);
+
     @ApiModelProperty("根据id修改")
     long updatePictureById(T t);
 

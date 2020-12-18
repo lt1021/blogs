@@ -15,8 +15,14 @@ public class PictureServiceImpl   implements PictureService<Picture> {
     private PictureDao pictureDao;
 
     @Override
-    public Picture get(Integer id) {
+    public Picture query(Integer id) {
         return  pictureDao.query();
+    }
+
+
+    @Override
+    public Picture get(Integer id) {
+        return pictureDao.get(id);
     }
 
     @Override

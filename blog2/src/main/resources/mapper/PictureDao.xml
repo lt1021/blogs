@@ -21,9 +21,15 @@
         </where>
     </select>
 
-    <insert id="insert" >
-
+    <insert id="insertPicture" parameterType="Picture">
+        insert t_picture p
 
     </insert>
+
+    <select id="get" resultType="Picture">
+        select <include refid="picture_column"/>
+        from t_picture p
+        where id =#{id}
+    </select>
 
 </mapper>

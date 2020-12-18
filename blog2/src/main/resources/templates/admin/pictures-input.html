@@ -23,7 +23,7 @@
 <!--中间内容-->
 <div  class="m-container-small m-padded-tb-massive">
     <div class="ui container">
-        <form action="#" method="post" th:action="*{id}==null ? @{/admin/pictures} : @{/admin/pictures/{id}(id=*{id})} " th:object="${picture}" class="ui form">
+        <form action="#" method="post" th:action="*{id}==null ? @{/admin/picture/insertOrUpdate} : @{/admin/picture/insertOrUpdate/{id}(id=*{id})} " th:object="${picture}" class="ui form" <!--enctype="multipart/form-data"-->>
             <input type="hidden" name="id" th:value="*{id}">
             <div class=" field">
                 <div class="ui left labeled input m-margin-top">
@@ -31,16 +31,27 @@
                     <input type="text" name="picturename" placeholder="图片名称" th:value="*{picturename}">
                 </div>
                 <div class="ui left labeled input m-margin-top">
-                    <label class="ui teal basic label">时间地点</label>
+                    <label class="ui teal basic label">时间</label>
                     <input type="text" name="picturetime" placeholder="时间地点" th:value="*{picturetime}">
                 </div>
+                <div class="ui left labeled input m-margin-top">
+                    <label class="ui teal basic label">地点</label>
+                    <!--<input type="file" name="file" accept="image/*" placeholder="图片地址" th:value="*{pictureaddress}">-->
+
+                    <input type="text" name="pictureaddress" placeholder="图片地址" th:value="*{pictureaddress}">
+                </div>
+
 
 
                 <div class="ui left labeled input m-margin-top">
                     <label class="ui teal basic label">图片地址</label>
-                    <input type="file" name="file" accept="image/*" placeholder="图片地址" th:value="*{pictureaddress}">
-                    <!--<input type="text" name="pictureaddress" placeholder="图片地址" th:value="*{pictureaddress}">-->
+                    <!--<input type="file" name="file" accept="image/*" placeholder="图片地址" th:value="*{imagePath}">-->
+
+                    <input type="text" name="imagePath" placeholder="图片地址" th:value="*{imagePath}">
                 </div>
+
+
+
                 <div class="ui left labeled input m-margin-top">
                     <label class="ui teal basic label">图片描述</label>
                     <input type="text" name="picturedescription" placeholder="图片描述" th:value="*{picturedescription}">

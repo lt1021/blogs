@@ -25,6 +25,8 @@ logging:  #日志级别
 server:
   port: 8082
 
-file.upload.path=F://images/
-file.upload.path.relative=/images/**
+# file:
+#  upload:
+#    path: F://images/
+#    relative: /images/**
 
