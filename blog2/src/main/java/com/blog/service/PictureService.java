@@ -18,13 +18,13 @@ public interface PictureService<T> {
     Picture query(Integer id);
 
     @ApiModelProperty("根据id修改")
-    long updatePictureById(T t);
+    int updatePictureById(T t);
 
     @ApiModelProperty("根据id删除")
-    long detelePictureById(Integer id);
+    int detelePictureById(Integer id);
 
     @ApiModelProperty("根据id添加")
-    long insert(T  t);
+    int insert(T  t);
 
     @ApiModelProperty("查询全部")
     List<T> BlogPicture();

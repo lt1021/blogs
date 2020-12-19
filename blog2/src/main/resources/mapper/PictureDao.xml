@@ -21,15 +21,41 @@
         </where>
     </select>
 
-    <insert id="insertPicture" parameterType="Picture">
-        insert t_picture p
 
-    </insert>
 
     <select id="get" resultType="Picture">
         select <include refid="picture_column"/>
         from t_picture p
         where id =#{id}
     </select>
+
+    <insert id="insertPicture" keyProperty="id" useGeneratedKeys="true" parameterType="Picture">
+        insert t_picture
+        (
+        pictureaddress,
+        picturedescription,
+        picturename,
+        picturetime,
+        imagePath)
+        values (#{pictureaddress},#{picturedescription},#{picturename},#{picturetime},#{imagePath});
+
+    </insert>
+
+    <delete id="delete" >
+        delete from  t_picture
+        where id =#{id}
+    </delete>
+
+    <update id="update">
+        update  t_picture
+        set
+            pictureaddress = #{pictureaddress},
+            picturedescription = #{picturedescription},
+            picturename = #{picturename},
+            picturetime = #{picturetime},
+            imagePath = #{imagePath}
+        where id = #{id};
+
+    </update>
 
 </mapper>

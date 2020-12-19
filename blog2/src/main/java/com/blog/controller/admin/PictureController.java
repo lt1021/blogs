@@ -6,6 +6,7 @@ import com.blog.service.PictureService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import io.swagger.annotations.ApiOperation;
+import org.omg.CORBA.INTERNAL;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -35,8 +36,8 @@ public class PictureController {
     @GetMapping("/pictures")
     @ApiOperation(value = "查询所有照片")
     public String picture(Model model,
-                         /* @PathVariable Long id,*/ @RequestParam(required = false,defaultValue = "1",value = "pagenum")int pagenum){
-        PageHelper.startPage(pagenum, 5);  //开启分页
+                         /* @PathVariable Long id,*/   @RequestParam(defaultValue = "1",value = "pageNum") Integer pageNum){
+        PageHelper.startPage(pageNum, 5);  //开启分页
         List<Picture> pictures = pictureService.BlogPicture();
         PageInfo<Picture> pageInfo = new PageInfo<>(pictures);
         model.addAttribute("pageInfo",pageInfo);
@@ -84,14 +85,38 @@ public class PictureController {
             }
             attributes.addFlashAttribute("msg", "新增成功");
         }
-        return "redirect :/admin/picture";
+        return "redirect:/admin/pictures";
     }
 
-    @DeleteMapping("/picture/delete/{id}")
+//    @DeleteMapping("/pictures/{id}/delete")
+    @GetMapping("/pictures/{id}/delete")
     @ApiOperation(value = "删除一张照片记录")
     public String deleteImage(@PathVariable Integer id,RedirectAttributes attributes){
         pictureService.detelePictureById(id);
         attributes.addFlashAttribute("msg","图片删除成功");
-        return "redirect :/admin/picture";
+        return "redirect:/admin/pictures";
     }
+
+    @GetMapping("/pictures/{id}/input")
+    @ApiOperation(value = "跳转编辑相册")
+    public String editInput(@PathVariable Integer id, Model model) {
+        model.addAttribute("picture", pictureService.get(id));
+        return "admin/pictures-input";
+    }
+
+
+    @PostMapping("/pictures/{id}")
+    @ApiOperation(value = "编辑相册")
+    public String editPost(@Valid Picture picture, RedirectAttributes attributes) {
+
+        int P = pictureService.updatePictureById(picture);
+        if (P == 0 ) {
+            attributes.addFlashAttribute("message", "编辑失败");
+        } else {
+            attributes.addFlashAttribute("message", "编辑成功");
+        }
+        return "redirect:/admin/pictures";
+    }
+
+
 }

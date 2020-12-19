@@ -17,7 +17,7 @@ public interface PictureDao {
 
     Picture get(Integer id);
 
-    long update(Picture picture);
+    int update(Picture picture);
 
-    long detele(Integer id);
+    int delete(Integer id);
 }

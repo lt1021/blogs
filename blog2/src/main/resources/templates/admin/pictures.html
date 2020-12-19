@@ -48,7 +48,7 @@
                 <td th:text="${pictures.picturetime}">2019年12月31日 深圳</td>
                 <td>
                     <a href="#" th:href="@{/admin/pictures/{id}/input(id=${pictures.id})}" class="ui mini teal basic button">编辑</a>
-                    <a href="#" th:href="@{/admin/pictures/{id}/delete(id=${pictures.id})}" onclick="return confirm('确定要删除该照片吗？三思啊! 删了可就没了！')" class="ui mini red basic button">删除</a>
+                    <a href="#" th:href="@{/admin/pictures/{id}/delete(id=${pictures.id})}"  onclick="return confirm('确定要删除该照片吗？三思啊! 删了可就没了！')" class="ui mini red basic button ">删除</a>
                 </td>
             </tr>
             </tbody>
@@ -61,7 +61,7 @@
                         </div>
 
                         <div class="ten wide column" align="center">
-                            <p>第 <span th:text="${pageInfo.pageNum}"></span> 页，共 <span th:text="${pageInfo.pages}"></span> 页，有 <span th:text="${pageInfo.total}"></span> 个分类</p>
+                            <p>第 <span th:text="${pageInfo.pageNum}"></span> 页，共 <span th:text="${pageInfo.pages}"></span> 页，有 <span th:text="${pageInfo.total}"></span> 个照片</p>
                         </div>
 
                         <div class="three wide column" align="center">
@@ -105,6 +105,8 @@
     $('.ui.dropdown').dropdown({
         on : 'hover'
     });
+
+
 
     //消息提示关闭初始化
     $('.message .close')

@@ -23,7 +23,7 @@
 <!--中间内容-->
 <div  class="m-container-small m-padded-tb-massive">
     <div class="ui container">
-        <form action="#" method="post" th:action="*{id}==null ? @{/admin/picture/insertOrUpdate} : @{/admin/picture/insertOrUpdate/{id}(id=*{id})} " th:object="${picture}" class="ui form" <!--enctype="multipart/form-data"-->>
+        <form action="#" method="post" th:action="*{id}==null ? @{/admin/picture/insertOrUpdate} : @{/admin/picture/insertOrUpdate/{id}(id=*{id})} " th:object="${picture}" class="ui form" <!--enctype="multipart/form-data"--> >
             <input type="hidden" name="id" th:value="*{id}">
             <div class=" field">
                 <div class="ui left labeled input m-margin-top">
