@@ -58,11 +58,10 @@
 
   <!--导入的script-->
   <th:block th:replace="_fragments :: script">
-
+    <script src="../static/lib/picture/js/jkresponsivegallery.js" th:src="@{/lib/picture/js/jkresponsivegallery.js}"></script>
   </th:block>
-
+<script src="../static/lib/picture/js/jkresponsivegallery.js"/>
   <script>
-
     $('.menu.toggle').click(function () {
       $('.m-item').toggleClass('m-mobile-hide');
     });

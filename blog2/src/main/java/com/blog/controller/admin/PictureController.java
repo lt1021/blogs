@@ -1,22 +1,22 @@
 package com.blog.controller.admin;
 
 import com.blog.pojo.Picture;
-import com.blog.pojo.Tag;
 import com.blog.service.PictureService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import io.swagger.annotations.ApiOperation;
-import org.omg.CORBA.INTERNAL;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.validation.Valid;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
 
@@ -54,41 +54,63 @@ public class PictureController {
         return "admin/pictures-input";
     }
 
-
-    @PostMapping("/picture/insertOrUpdate")
-    @ApiOperation(value = "添加一张照片记录")
-    public String insertImage(@Valid Picture picture/*,@RequestParam("file") MultipartFile file*/, RedirectAttributes attributes){
-//        // 获取上传文件名
-//        String filename = file.getOriginalFilename();
-//        // 定义上传文件保存路径
-//        String path = "C:/Users/Administrator/Pictures";
-//        // 新建文件
-//        File filepath = new File(path, filename);
-//        // 判断路径是否存在，如果不存在就创建一个
-//        if (!filepath.getParentFile().exists()) {
-//            filepath.getParentFile().mkdirs();
-//        }
-//        try {
-//            // 写入文件
-//            file.transferTo(new File(path + File.separator + filename));
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//        picture.setImagePath(filename);
+    @PostMapping("/addImage")
+    @ResponseBody
+    public Object addImage(MultipartFile file)throws IOException {
+//        System.out.println("---" + fileUploadPath);//我这里用的springboot 在application.properties中配置，使用@Value 获取的文件上传目录
 //
-        if (pictureService.get(picture.getId())!= null&& picture.getId()!=null){
-            pictureService.updatePictureById(picture);
-            attributes.addFlashAttribute("msg", "修改成功");
-        }else {
-            if ( pictureService.insert(picture) == 0  ) {
-                attributes.addFlashAttribute("msg", "新增失败");
-            }
-            attributes.addFlashAttribute("msg", "新增成功");
+//        MultipartFile file = multiReq.getFile("file");
+//        String originalFilename = file.getOriginalFilename();
+//        String suffix = originalFilename.substring(originalFilename.indexOf("."));
+//        String localFileName = MD5Util.md5(file.getInputStream()) + suffix;
+//        File localFile = new File(fileUploadPath + localFileName);
+//        if (!localFile.exists()) {
+//            localFile.createNewFile();
+//
+//            FileOutputStream fos = new FileOutputStream(
+//                    localFile);
+//            FileInputStream fs = (FileInputStream) multiReq.getFile("img").getInputStream();
+//            byte[] buffer = new byte[1024];
+//            int len = 0;
+//            while ((len = fs.read(buffer)) != -1) {
+//                fos.write(buffer, 0, len);
+//            }
+//            fos.close();
+//            fs.close();
+//
+//        } else {
+//            log.info("文件已存在！！");
+//        }
+        //        isMultiple =(MultipartFile) picture.getImagePath();
+        String filename = file.getOriginalFilename();
+        // 定义上传文件保存路径
+        String path = "static/images/picture/";
+
+        File filepath = new File(path, filename);
+        if (!filepath.getParentFile().exists()) {
+            filepath.getParentFile().mkdirs();
         }
+        try {
+            // 写入文件
+            file.transferTo(new File(path + filename));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return "ok";
+    }
+
+    @PostMapping("/picture/insert")
+    @ApiOperation(value = "添加一张照片记录")
+    public String insertImage(@Valid Picture picture,  RedirectAttributes attributes)throws IOException{
+        if ( pictureService.insert(picture) == 0  ) {
+            attributes.addFlashAttribute("msg", "新增失败");
+        }
+        attributes.addFlashAttribute("msg", "新增成功");
+
         return "redirect:/admin/pictures";
     }
 
-//    @DeleteMapping("/pictures/{id}/delete")
+
     @GetMapping("/pictures/{id}/delete")
     @ApiOperation(value = "删除一张照片记录")
     public String deleteImage(@PathVariable Integer id,RedirectAttributes attributes){
@@ -101,6 +123,7 @@ public class PictureController {
     @ApiOperation(value = "跳转编辑相册")
     public String editInput(@PathVariable Integer id, Model model) {
         model.addAttribute("picture", pictureService.get(id));
+
         return "admin/pictures-input";
     }
 
@@ -119,4 +142,7 @@ public class PictureController {
     }
 
 
+
 }
+
+
