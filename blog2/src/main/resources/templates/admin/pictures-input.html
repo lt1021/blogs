@@ -7,26 +7,29 @@
 <link rel="stylesheet" href="../../static/lib/picture/css/jkresponsivegallery.css" th:href="@{/lib/picture/css/jkresponsivegallery.css}">
 <body>
 <!--头部导航-->
-    <nav th:replace="admin/_fragments :: menu(4)"/>
-    <div class="m-padded-tb-hugex">
-        <div class="ui attached pointing menu">
-            <div class="ui container">
-                <div class="right menu">
-                    <a href="#" th:href="@{/admin/pictures/input}" class="item">新增</a>
-                    <a href="#" th:href="@{/admin/pictures}" class="teal active item">列表</a>
-                </div>
+<nav th:replace="admin/_fragments :: menu(4)"/>
+<div class="m-padded-tb-hugex">
+    <div class="ui attached pointing menu">
+        <div class="ui container">
+            <div class="right menu">
+                <a href="#" th:href="@{/admin/pictures/input}" class="item">新增</a>
+                <a href="#" th:href="@{/admin/pictures}" class="teal active item">列表</a>
             </div>
         </div>
     </div>
+</div>
 
 <br>
 
 
 <!--中间内容-->
-<div  class="m-container-small m-padded-tb-massive">
+<div class="m-container-small m-padded-tb-massive">
     <div class="ui container">
-        <form action="#" method="post" th:action="*{id}==null ? @{/admin/picture/insert} : @{/admin/pictures/{id}(id=*{id})} " th:object="${picture}" class="ui form"  >
+        <form action="#" method="post"
+              th:action="*{id}==null ? @{/admin/picture/insert} : @{/admin/pictures/{id}(id=*{id})} "
+              th:object="${picture}" class="ui form">
             <input type="hidden" name="id" th:value="*{id}">
+            <input type="hidden" name="imagePath" th:value="*{imagePath}" id=" ">
             <div class=" field">
                 <div class="ui left labeled input m-margin-top">
                     <label class="ui teal basic label">图片名称</label>
@@ -42,16 +45,14 @@
                     <input type="text" name="pictureaddress" placeholder="图片地址" th:value="*{pictureaddress}">
                 </div>
 
-
-
                 <div class="ui left labeled input m-margin-top item" id="app">
-                    <!--<label class="ui teal basic label" name="imagePath" th:value="*{imagePath}">图片上传</label>-->
-                    <!--<input type="file" name="imagePath" accept="image/*" class="ui button  " placeholder="图片地址" th:value="*{imagePath}" id="imagePath">-->
-                    <!--<input type="text" name="imagePath" placeholder="图片地址" th:value="*{imagePath}">-->
+                    <!--<input type="file" name="imagePath" accept="image/*" class="ui button " placeholder="图片地址"-->
+                           <!--th:value="*{imagePath}" id="imagePath">-->
                     <el-upload
                             action="/admin/addImage"
                             :limit='1'
                             :multiple='true'
+                            name="imagePath"
                             list-type="picture-card"
                             :on-preview="handlePictureCardPreview"
                             :on-remove="handleRemove">
@@ -60,20 +61,7 @@
                     <el-dialog :visible.sync="dialogVisible">
                         <img width="100%" :src="dialogImageUrl" alt="">
                     </el-dialog>
-
                 </div>
-
-                <el-upload
-                        action="https://jsonplaceholder.typicode.com/posts/"
-                        list-type="picture-card"
-                        :on-preview="handlePictureCardPreview"
-                        :on-remove="handleRemove">
-                    <i class="el-icon-plus"></i>
-                </el-upload>
-                <el-dialog :visible.sync="dialogVisible">
-                    <img width="100%" :src="dialogImageUrl" alt="">
-                </el-dialog>
-
 
                 <div class="ui left labeled input m-margin-top">
                     <label class="ui teal basic label">图片描述</label>
@@ -90,7 +78,7 @@
               </div>
             /*/-->
             <div class="ui right aligned container">
-                <button type="button" class="ui button" onclick="window.history.go(-1)" >返回</button>
+                <button type="button" class="ui button" onclick="window.history.go(-1)">返回</button>
                 <button class="ui teal submit button">提交</button>
             </div>
 
@@ -112,7 +100,7 @@
     });
 
     $('.ui.dropdown').dropdown({
-        on : 'hover'
+        on: 'hover'
     });
 
     var Main = {

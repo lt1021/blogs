@@ -4,6 +4,10 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password:
+  servlet:
+    #    设置文件上传最大值
+    multipart:
+      max-file-size: 10MB
 
 pagehelper:                #分页插件
   helper-dialect: mysql
@@ -21,10 +25,20 @@ logging:  #日志级别
     com.blog: debug
   file: log/blog-dev.log
 
+
   #开发环境
 server:
   port: 8082
+#自定义文件上传路径，用于Controller层
+filePath: /home/image
 
+ImageUpload:
+  address: /usr/local/nginx/html/images/
+  imageport: 80
+  server: 192.168.7.109
+  FTP_PORT: 21
+  FTP_USERNAME: root
+  FTP_PASSWORD: root
 # file:
 #  upload:
 #    path: F://images/

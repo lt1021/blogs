@@ -48,7 +48,7 @@ public class LogAspect {
     public void doAfterReturn(Object result){
 
         //打印返回值
-        logger.info("Result: {}", result);
+        logger.info("ResponseData: {}", result);
     }
 
     @Data
