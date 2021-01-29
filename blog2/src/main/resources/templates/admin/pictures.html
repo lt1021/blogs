@@ -25,7 +25,7 @@
 
 
 <!--中间内容-->
-<div  class="m-padded-tb-big">
+<div class="m-padded-tb-big">
     <div class="ui container">
         <!--消息提示-->
         <div class="ui success message" th:unless="${#strings.isEmpty(message)}">
@@ -47,37 +47,60 @@
                 <td th:text="${pictures.picturename}">东西冲徒步</td>
                 <td th:text="${pictures.picturetime}">2019年12月31日 深圳</td>
                 <td>
-                    <a href="#" th:href="@{/admin/pictures/{id}/input(id=${pictures.id})}" class="ui mini teal basic button">编辑</a>
-                    <a href="#" th:href="@{/admin/pictures/{id}/delete(id=${pictures.id})}" onclick="return confirm('确定要删除该照片吗？三思啊! 删了可就没了！')" class="ui mini red basic button">删除</a>
+                    <a href="#" th:href="@{/admin/pictures/{id}/input(id=${pictures.id})}"
+                       class="ui mini teal basic button">编辑</a>
+                    <a href="#" th:href="@{/admin/pictures/{id}/delete(id=${pictures.id})}"
+                       onclick="return confirm('确定要删除该照片吗？三思啊! 删了可就没了！')" class="ui mini red basic button">删除</a>
                 </td>
             </tr>
             </tbody>
             <tfoot>
             <tr>
-                <th colspan="6" >
-                    <div class="ui inverted divided stackable grid">
-                        <div class="three wide column" align="center">
-                            <a class="item" th:href="@{/admin/pictures(pageNum=${pageInfo.hasPreviousPage}?${pageInfo.prePage}:1)}" th:unless="${pageInfo.isFirstPage}">上一页</a>
-                        </div>
-
-                        <div class="ten wide column" align="center">
-                            <p>第 <span th:text="${pageInfo.pageNum}"></span> 页，共 <span th:text="${pageInfo.pages}"></span> 页，有 <span th:text="${pageInfo.total}"></span> 个分类</p>
-                        </div>
-
-                        <div class="three wide column" align="center">
-                            <a class="item" th:href="@{/admin/pictures(pageNum=${pageInfo.hasNextPage}?${pageInfo.nextPage}:${pageInfo.pages})}" th:unless="${pageInfo.isLastPage}">下一页</a>
-                        </div>
+                <th colspan="7">
+                    <div class="ui mini pagination menu"  >
+                        <div class="item"><a th:href="@{/admin/pictures}">首页</a></div>
+                        <div class="item"><a th:href="@{/admin/pictures(pagenum=${pageInfo.hasPreviousPage}?${pageInfo.prePage}:1)}">上一页</a></div>
+                        <div class="item"><a th:href="@{/admin/pictures(pagenum=${pageInfo.hasNextPage}?${pageInfo.nextPage}:${pageInfo.pages})}">下一页</a></div>
+                        <div class="item"><a th:href="@{/admin/pictures(pagenum=${pageInfo.pages})}">尾页</a></div>
                     </div>
-
-                    <div align="center">
-                        <a href="#" th:href="@{/admin/pictures/input}">
-                            <button type="button" class="ui teal button m-mobile-wide m-margin-top"><i class="pencil icon"></i>新增</button>
-                        </a>
-                    </div>
-                    <!--<a href="#" th:href="@{/admin/pictures/input}" class="ui mini right floated teal basic button">新增</a>-->
+                    <a href="#" th:href="@{/admin/pictures/input}" class="ui mini right floated teal basic button">新增</a>
                 </th>
             </tr>
             </tfoot>
+            <!--<tfoot>-->
+            <!--<tr>-->
+                <!--<th colspan="6">-->
+                    <!--<div class="ui inverted divided stackable grid">-->
+                        <!--<div class="three wide column" align="center">-->
+                            <!--<a class="item"-->
+                               <!--th:href="@{/admin/pictures(pageNum=${pageInfo.hasPreviousPage}?${pageInfo.prePage}:1)}"-->
+                               <!--th:unless="${pageInfo.isFirstPage}">上一页</a>-->
+                        <!--</div>-->
+
+                        <!--<div class="ten wide column" align="center">-->
+                            <!--<p>第 <span th:text="${pageInfo.pageNum}"></span> 页，共 <span-->
+                                    <!--th:text="${pageInfo.pages}"></span> 页，有 <span th:text="${pageInfo.total}"></span>-->
+                                <!--个分类</p>-->
+                        <!--</div>-->
+
+                        <!--<div class="three wide column" align="center">-->
+                            <!--<a class="item"-->
+                               <!--th:href="@{/admin/pictures(pageNum=${pageInfo.hasNextPage}?${pageInfo.nextPage}:${pageInfo.pages})}"-->
+                               <!--th:unless="${pageInfo.isLastPage}">下一页</a>-->
+                        <!--</div>-->
+                    <!--</div>-->
+
+                    <!--<div align="center">-->
+                        <!--<a href="#" th:href="@{/admin/pictures/input}">-->
+                            <!--<button type="button" class="ui teal button m-mobile-wide m-margin-top"><i-->
+                                    <!--class="pencil icon"></i>新增-->
+                            <!--</button>-->
+                        <!--</a>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;<a href="#" th:href="@{/admin/pictures/input}" class="ui mini right floated teal basic button">新增</a>&ndash;&gt;-->
+                <!--</th>-->
+            <!--</tr>-->
+            <!--</tfoot>-->
         </table>
     </div>
 </div>
@@ -103,7 +126,7 @@
     });
 
     $('.ui.dropdown').dropdown({
-        on : 'hover'
+        on: 'hover'
     });
 
     //消息提示关闭初始化
