@@ -5,51 +5,43 @@
 </head>
 <body>
 <!--头部导航-->
-    <nav th:replace="admin/_fragments :: menu(4)"/>
-    <div class="m-padded-tb-hugex">
-        <div class="ui attached pointing menu">
-            <div class="ui container">
-                <div class="right menu">
-                    <a href="#" th:href="@{/admin/pictures/input}" class="item">新增</a>
-                    <a href="#" th:href="@{/admin/pictures}" class="teal active item">列表</a>
-                </div>
+<nav th:replace="admin/_fragments :: menu(4)"/>
+<div class="m-padded-tb-hugex">
+    <div class="ui attached pointing menu">
+        <div class="ui container">
+            <div class="right menu">
+                <a href="#" th:href="@{/admin/pictures/input}" class="item">新增</a>
+                <a href="#" th:href="@{/admin/pictures}" class="teal active item">列表</a>
             </div>
         </div>
     </div>
+</div>
 
 <br>
 
 
 <!--中间内容-->
-<div  class="m-container-small m-padded-tb-massive">
+<div class="m-container-small m-padded-tb-massive">
     <div class="ui container">
-        <form action="#" method="post" th:action="*{id}==null ? @{/admin/picture/insertOrUpdate} : @{/admin/picture/insertOrUpdate/{id}(id=*{id})} " th:object="${picture}" class="ui form" <!--enctype="multipart/form-data"-->>
+        <form action="#" method="post"
+              th:action="*{id}==null ? @{/admin/picture/insert} : @{/admin/picture/insert/{id}(id=*{id})} "
+              th:object="${picture}" class="ui form" enctype="multipart/form-data">
             <input type="hidden" name="id" th:value="*{id}">
             <div class=" field">
                 <div class="ui left labeled input m-margin-top">
                     <label class="ui teal basic label">图片名称</label>
                     <input type="text" name="picturename" placeholder="图片名称" th:value="*{picturename}">
                 </div>
-                <div class="ui left labeled input m-margin-top">
-                    <label class="ui teal basic label">时间</label>
-                    <input type="text" name="picturetime" placeholder="时间地点" th:value="*{picturetime}">
+
+
+                <div class="ui left labeled input m-margin-top item" id="app">
+                    <!--<label class="ui teal basic label" name="imagePath" th:value="*{imagePath}">图片上传</label>-->
+                    <input type="file" name="path" accept="image/*" class="ui button  " placeholder="图片地址"
+                           th:value="*{imagePath}" id="imagePath">
+                    <!--<input type="text" name="imagePath" placeholder="图片地址" th:value="*{imagePath}">-->
+
+
                 </div>
-                <div class="ui left labeled input m-margin-top">
-                    <label class="ui teal basic label">地点</label>
-                    <!--<input type="file" name="file" accept="image/*" placeholder="图片地址" th:value="*{pictureaddress}">-->
-
-                    <input type="text" name="pictureaddress" placeholder="图片地址" th:value="*{pictureaddress}">
-                </div>
-
-
-
-                <div class="ui left labeled input m-margin-top">
-                    <label class="ui teal basic label">图片地址</label>
-                    <!--<input type="file" name="file" accept="image/*" placeholder="图片地址" th:value="*{imagePath}">-->
-
-                    <input type="text" name="imagePath" placeholder="图片地址" th:value="*{imagePath}">
-                </div>
-
 
 
                 <div class="ui left labeled input m-margin-top">
@@ -67,7 +59,7 @@
               </div>
             /*/-->
             <div class="ui right aligned container">
-                <button type="button" class="ui button" onclick="window.history.go(-1)" >返回</button>
+                <button type="button" class="ui button" onclick="window.history.go(-1)">返回</button>
                 <button class="ui teal submit button">提交</button>
             </div>
 
@@ -78,22 +70,20 @@
 <br>
 <!--底部footer-->
 <footer th:replace="admin/_fragments :: footer">
-
 </footer>
 
 <th:block th:replace="admin/_fragments :: script">
-
 </th:block>
 
 <script>
-
     $('.menu.toggle').click(function () {
         $('.m-item').toggleClass('m-mobile-hide');
     });
 
     $('.ui.dropdown').dropdown({
-        on : 'hover'
+        on: 'hover'
     });
+
 
     //消息提示关闭初始化
     $('.message .close')

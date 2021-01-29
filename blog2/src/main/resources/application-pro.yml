@@ -22,4 +22,10 @@ logging:  #日志级别
   file: log/blog-pro.log
 
 
+file:
+  dirPath: ${DIR_PATH:/file} #这个是docker映射的路径,本地路径
+  template:
+    path: ${TEMPLATE_PATH:/templates} #这个是导出模板所有在的服务的域名(包括http://)
+  isStatis: ${IS_STATIC:true} #表示是否做映射
+  domain: ${DOMAIN:http://ltandqly.top/}
 
