@@ -45,7 +45,7 @@
             <tr align="center" th:each="pictures,iterStat : ${pageInfo.list}">
                 <td th:text="${iterStat.count}">1</td>
                 <td th:text="${pictures.picturename}">东西冲徒步</td>
-                <td th:text="${pictures.picturetime}">2019年12月31日 深圳</td>
+                <td th:datetime="${pictures.picturetime}">2019年12月31日 深圳</td>
                 <td>
                     <a href="#" th:href="@{/admin/pictures/{id}/input(id=${pictures.id})}"
                        class="ui mini teal basic button">编辑</a>
