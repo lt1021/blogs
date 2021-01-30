@@ -455,6 +455,19 @@ div.responsivegallery div.rightnav:hover{
 	background-size: 100% 100%;
 }
 
+.picture-zmki_admin{
+	/*border: 0;*/
+	/*!*height: 100%;*!*/
+	/*left: 0;*/
+	/*position: absolute;*/
+	/*top: 0;*/
+	/*!*width: 100%;*!*/
+	/*object-fit: cover;*/
+	/*cursor: pointer;*/
+	/*outline: 0px;*/
+	/*background-image: url(https://a-oss.zmki.cn/2020/20200212-fcf30f3d33625.gif);*/
+	/*background-size: 100% 100%;*/
+}
 
 /*#imagePath{*/
 	/*display: none;*/
