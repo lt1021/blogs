@@ -6,9 +6,8 @@ spring:
     password: 102100lt
   servlet:
     multipart:
-      enabled: true
-      max-file-size: 1024MB
-      max-request-size: 1024MB
+      max-file-size: 100MB
+      max-request-size: 100MB
 
 
 pagehelper:                #分页插件
