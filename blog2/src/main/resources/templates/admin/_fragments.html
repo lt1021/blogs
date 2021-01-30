@@ -4,15 +4,12 @@
   <head th:fragment="head(title)"> <!--title为传参-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../static/images/qly.ico" th:href="@{/images/qly.ico}">
+      <link rel="icon" href="../static/images/qly.ico" th:href="@{/images/qly.ico}">
     <title th:replace="${title}">博客详情</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
     <link rel="stylesheet" href="../../static/lib/editormd/css/editormd.min.css" th:href="@{/lib/editormd/css/editormd.min.css}">
     <link rel="stylesheet" href="../../static/css/me.css" th:href="@{/css/me.css}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css"> <!--引入element-ui样式文件-->
-    <script src="https://unpkg.com/vue/dist/vue.js"></script>   <!--引入Vue.js文件-->
-    <script src="https://unpkg.com/element-ui/lib/index.js"></script> <!--引入element-ui的JS文件-->
     <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
   </head>
 <body>
