@@ -48,6 +48,13 @@ public class PictureController {
         return "admin/pictures-input";
     }
 
+    @ApiOperation(value = "批量添加")
+    @GetMapping("/pictures/inputAll")
+    public String editInputAll(@PathVariable Integer id, Model model) {
+        model.addAttribute("picture", pictureService.get(id));
+        return "admin/pictures-input";
+    }
+
 
     @PostMapping("/picture/insert")
     @ApiOperation(value = "添加一张照片记录")
@@ -72,6 +79,8 @@ public class PictureController {
         model.addAttribute("picture", pictureService.get(id));
         return "admin/pictures-input";
     }
+
+
 
     @PostMapping("/picture/insert/{id}")
     public String editPost(@Valid Picture picture, RedirectAttributes attributes)throws IOException  {
