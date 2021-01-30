@@ -1,78 +1,75 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
-<head  th:replace="_fragments :: head(~{::title})">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>照片墙</title>
-  <link href="../static/images/qly.ico" th:href="@{/images/qly1.png}" rel="icon" type="image/x-ico">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
-  <link rel="stylesheet" href="../static/css/me.css" th:href="@{/css/me.css}">
-  <link rel="stylesheet" href="../static/lib/picture/css/jkresponsivegallery.css" th:href="@{/lib/picture/css/jkresponsivegallery.css}">
+<head th:replace="_fragments :: head(~{::title})">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>照片墙</title>
 </head>
 
 <body class="picture-bg">
 
-  <!--头部导航-->
-  <nav th:replace="_fragments :: menu(5)" ></nav>
+<!--头部导航-->
+<nav th:replace="_fragments :: menu(5)"></nav>
 
-  <!--顶部图片-->
-  <div class="m-bg-type_outer" style="width: 100%;height: 40%">
-    <img src="../static/images/qly1.png" th:src="@{/images/qly1.png}" alt="" class="ui m-bg image" style="width: 296px;height: 391px">
-    <!--<img src="../static/images/qly1.png" th:src="@{/images/qly1.png}" alt="" class="ui m-bg image" style="width: 100%;;height: 100%;">-->
+<!--顶部图片-->
+<div class="m-bg-type_outer" style="width: 100%;height: 40%">
+    <img src="../static/images/chuan.jpg" th:src="@{/images/chuan.jpg}" alt="" class="ui m-bg image"
+         style="width: 100%;;height: 100%;">
+    &lt;!&ndash;<img src="../static/images/qly1.png" th:src="@{/images/qly1.png}" alt="" class="ui m-bg image"
+                     style="width: 100%;;height: 100%;">&ndash;&gt;
     <div class="m-bg-class_cover">
-      <div class="ui container" style="position: relative ;bottom: -540px;">
-        <div class="m-font-size-title m-right-bottom" align="center" style="font-family:'STXingkai'">照片墙</div>
-        <div class="m-font-size-text-init-title m-margin-top" align="center">愿你走出半生，归来仍是少年</div>
-      </div>
-    </div>
-  </div>
-
-
-
-
-  <!--照片墙-->
-  <div id="picture-main">
-    <article class="thumb" th:each="picture : ${pictures}">
-      <div class="ma5-gallery">
-        <div class="rthumbnail" >
-          <a href="../static/images/mzqly.jpg" th:href="@{${picture.imagePath}}">
-            <img class="picture-zmki_px ui m-bg image" src="../static/images/mzqly.jpg"  style="width: 296px;height: 391px" th:src="@{${picture.imagePath}}" >
-          </a>
-          <div class="m-picture-text" th:text="${picture.picturename}" >数据不见了</div>
-          <div  class="rcaption">
-            <div style="font-size: large;" th:text="${picture.picturename}">数据不见了</div>
-            <div style="font-size: small" class="m-margin-top" th:text="${picture.picturetime}">数据不见了 &nbsp;<span th:text="${picture.pictureaddress}">数据不见了</span></div>
-            <p style="font-size: small" th:text="${picture.picturedescription}">数据不见了</p>
-          </div>
+        <div class="ui container" style="position: relative ;bottom: -540px;">
+            <div class="m-font-size-title m-right-bottom" align="center" style="font-family:'Microsoft YaHei'">照片墙</div>
+            <div class="m-font-size-text-init-title m-margin-top" align="center">为什么不找我聊天，我专门为你学的打字。</div>
         </div>
-      </div>
+    </div>
+</div>
+
+
+
+<div id="picture-main">
+    <article class="thumb" th:each="picture : ${pictures}">
+        <div class="ma5-gallery">
+            <div class="rthumbnail">
+                <a href="../static/images/mzqly.jpg" th:href="@{${picture.imagePath}}">
+                    <img class="picture-zmki_px " src="../static/images/mzqly.jpg"
+                         th:src="@{${picture.imagePath}}">
+                </a>
+                <div class="m-picture-text" th:text="${picture.picturename}">数据不见了</div>
+                <div  class="rcaption">
+                    <div style="font-size: large;" th:text="${picture.picturename}">起风了</div>
+                    <div style="font-size: 16px" class="m-margin-top" th:text="${picture.picturetime}">2020-02-02 &nbsp;深圳</div>
+                    <p style="font-size: 16px" th:text="${picture.picturedescription}">我曾难自拔于世界之大，也沉迷于其中梦话</p>
+                </div>
+            </div>
+        </div>
     </article>
-  </div>
-  <br>
-  <br>
-  <!--底部footer-->
-  <footer th:replace="_fragments :: footer" class="ui inverted vertical segment m-padded-tb-massive">
+</div>
 
-  </footer>
+<br>
+<br>
+<!--底部footer-->
+<footer th:replace="_fragments :: footer" class="ui inverted vertical segment m-padded-tb-massive">
 
-  <!--导入的script-->
-  <th:block th:replace="_fragments :: script">
+</footer>
 
-  </th:block>
+<!--导入的script-->
+<th:block th:replace="_fragments :: script">
+</th:block>
 
-  <script>
+<script>
 
     $('.menu.toggle').click(function () {
-      $('.m-item').toggleClass('m-mobile-hide');
+        $('.m-item').toggleClass('m-mobile-hide');
     });
 
     $('.wechat').popup({
-      popup : $('.wechat-qr'),
-      position: 'bottom center'
+        popup: $('.wechat-qr'),
+        position: 'bottom center'
     });
     $('.qq').popup();
 
-  </script>
+</script>
 </body>
 </html>
