@@ -37,7 +37,8 @@
             <tr align="center">
                 <th>ID</th>
                 <th>图片名称</th>
-                <th>时间地点</th>
+                <th>图片</th>
+                <th>时间</th>
                 <th>操作</th>
             </tr>
             </thead>
@@ -45,6 +46,12 @@
             <tr align="center" th:each="pictures,iterStat : ${pageInfo.list}">
                 <td th:text="${iterStat.count}">1</td>
                 <td th:text="${pictures.picturename}">东西冲徒步</td>
+                <td  >
+                    <a href="../../static/images/mzqly.jpg" th:href="@{'/'+${pictures.imagePath}}">
+                        <img class="picture-zmki_admin " src="../../static/images/mzqly.jpg"
+                             th:src="@{'/'+${pictures.imagePath}}" style="width: 70px;;height: 70px;">
+                    </a>
+                </td>
                 <td th:text="${#dates.format(pictures.picturetime,'yyyy-MM-dd')}">2019年12月31日 </td>
                 <td>
                     <a href="#" th:href="@{/admin/pictures/{id}/input(id=${pictures.id})}"
