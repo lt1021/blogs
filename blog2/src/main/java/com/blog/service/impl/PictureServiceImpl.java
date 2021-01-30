@@ -3,7 +3,6 @@ package com.blog.service.impl;
 import com.blog.dao.PictureDao;
 import com.blog.pojo.Picture;
 import com.blog.service.PictureService;
-import com.fasterxml.jackson.databind.ser.std.NumberSerializers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,12 +25,12 @@ public class PictureServiceImpl   implements PictureService<Picture> {
     }
 
     @Override
-    public int updatePictureById(Picture picture) {
+    public long updatePictureById(Picture picture) {
         return pictureDao.update(picture);
     }
 
     @Override
-    public int detelePictureById(Integer id) {
+    public long detelePictureById(Integer id) {
 
         return pictureDao.delete(id);
     }
@@ -39,7 +38,7 @@ public class PictureServiceImpl   implements PictureService<Picture> {
 
 
     @Override
-    public int insert(Picture picture) {
+    public long insert(Picture picture) {
         return pictureDao.insertPicture(picture);
     }
 
