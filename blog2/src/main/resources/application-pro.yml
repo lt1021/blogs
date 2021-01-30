@@ -4,6 +4,12 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: 102100lt
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 1024MB
+      max-request-size: 1024MB
+
 
 pagehelper:                #分页插件
   helper-dialect: mysql

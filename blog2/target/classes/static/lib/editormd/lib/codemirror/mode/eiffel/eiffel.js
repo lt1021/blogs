@@ -70,7 +70,7 @@ CodeMirror.defineMode("eiffel", function() {
     'class',
     'Void',
     'True',
-    'Result',
+    'result',
     'Precursor',
     'False',
     'Current',

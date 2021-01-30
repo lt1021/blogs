@@ -35,8 +35,8 @@ public class PictureController {
         PageHelper.startPage(pagenum, 5);  //开启分页
         List<Picture> pictures = pictureService.BlogPicture();
         PageInfo<Picture> pageInfo = new PageInfo<>(pictures);
-        model.addAttribute("pageInfo", pageInfo);
-        model.addAttribute("pictures", pictures);
+        model.addAttribute("pageInfo",pageInfo);
+        model.addAttribute("pictures",pictures);
         return "admin/pictures";
     }
 
@@ -93,7 +93,7 @@ public class PictureController {
     @ApiOperation(value = "删除一张照片记录")
     public String deleteImage(@PathVariable Integer id, RedirectAttributes attributes) {
         pictureService.detelePictureById(id);
-        attributes.addFlashAttribute("msg", "图片删除成功");
-        return "redirect:/admin/pictures";
+        attributes.addFlashAttribute("msg","图片删除成功");
+        return "redirect :/admin/pictures";
     }
 }

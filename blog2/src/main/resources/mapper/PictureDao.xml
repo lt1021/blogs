@@ -2,25 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.blog.dao.PictureDao">
     <sql id="picture_column">
-        p
-        .
-        id
-        ,
-        p
-        .
-        pictureaddress,
-        p
-        .
-        picturedescription,
-        p
-        .
-        picturename,
-        p
-        .
-        picturetime,
-        p
-        .
-        imagePath
+        p.id,p.pictureaddress,p.picturedescription,
+        p.picturename,p.picturetime,p.imagePath
     </sql>
     <select id="BlogPicture" resultType="Picture">
         select

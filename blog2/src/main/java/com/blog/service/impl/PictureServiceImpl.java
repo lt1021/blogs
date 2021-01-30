@@ -26,20 +26,20 @@ public class PictureServiceImpl   implements PictureService<Picture> {
     }
 
     @Override
-    public long updatePictureById(Picture picture) {
+    public int updatePictureById(Picture picture) {
         return pictureDao.update(picture);
     }
 
     @Override
-    public long detelePictureById(Integer id) {
+    public int detelePictureById(Integer id) {
 
-        return pictureDao.detele(id);
+        return pictureDao.delete(id);
     }
 
 
 
     @Override
-    public long insert(Picture picture) {
+    public int insert(Picture picture) {
         return pictureDao.insertPicture(picture);
     }
 
