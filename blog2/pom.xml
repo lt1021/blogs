@@ -31,7 +31,15 @@
 		<poi-ooxml.version>3.9</poi-ooxml.version>
 	</properties>
 
+
+
 	<dependencies>
+		<!--hutool工具包插件-->
+		<dependency>
+			<groupId>cn.hutool</groupId>
+			<artifactId>hutool-all</artifactId>
+			<version>5.5.7</version>
+		</dependency>
 		<!--这三个jar包作用是将markdown格式转成html格式-->
 		<dependency>
 			<groupId>com.atlassian.commonmark</groupId>
