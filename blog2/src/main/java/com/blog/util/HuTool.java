@@ -2,14 +2,23 @@ package com.blog.util;
 
 import cn.hutool.core.convert.Convert;
 import cn.hutool.core.io.FileUtil;
+import cn.hutool.core.lang.Console;
 import cn.hutool.core.lang.TypeReference;
 import cn.hutool.core.util.CharsetUtil;
+import cn.hutool.core.util.NumberUtil;
 import cn.hutool.core.util.StrUtil;
+import cn.hutool.crypto.SecureUtil;
+import cn.hutool.crypto.symmetric.SymmetricAlgorithm;
+import cn.hutool.crypto.symmetric.SymmetricCrypto;
+import org.springframework.util.CollectionUtils;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * @author lt
@@ -183,5 +192,146 @@ public class HuTool extends Convert {
     public void toStringUtil() {
         String template = "{}爱{}，就像老鼠爱大米";
         String str = StrUtil.format(template, "我", "你"); //str -> 我爱你，就像老鼠爱大米
+
+        NumberUtil.isNumber("a");
+        String[] a = {"abc", "bcd", "def"};
+        Console.log(a);
     }
+    @Test
+    public void toArrayUtill() {
+        Integer[][] arrays  = {{0,2,0},{0,1,0},{0,112}};
+//        System.out.println(arrays[2][1]);
+//        ExceptionUtil.getMessage();
+    }
+
+    @Test
+    public void toMD5() {
+        //AES算法
+        String c = "102100";
+        //生成税基密匙
+        byte[] key = SecureUtil.generateKey(SymmetricAlgorithm.AES.getValue()).getEncoded();
+        //构建
+        SymmetricCrypto aes = new SymmetricCrypto (SymmetricAlgorithm.AES,key);
+        //加密
+        byte[] enc = aes.encrypt(c);
+        //解密
+        byte[] dec = aes.decrypt(enc);
+
+
+
+
+    }
+    public static void DoubleArray(){
+
+    /*    Integer[][] array  =new Integer[2][3];
+        Arrays.stream(array).forEach(d ->{
+            Arrays.stream(d).forEach(D ->{
+                System.out.println(D);
+            });
+        });
+        for (Integer[] integers : array) {
+            System.out.println(integers);
+            for (Integer integer : integers) {
+                System.out.println(integer);
+            }
+        }*/
+        Integer[][] arrays  = {{0,2,0},{0,1,0},{0,110}};
+//        for (Integer[] integers : arrays) {
+//            System.out.println(integers);
+//            for (Integer integer : integers) {
+//                System.out.println(integer);
+//            }
+//        }
+        System.out.println(arrays[2][1]);
+        Arrays.stream(arrays).collect(Collectors.toSet());
+
+        List<?> a = CollectionUtils.arrayToList(arrays);
+        a.forEach(d ->{
+            List<?>b = CollectionUtils.arrayToList(d);
+            System.out.println(b);
+        });
+
+    }
+
+    @Test
+    public void swapIntegers() {
+//        给你一个数组和两个索引，交换下标为这两个索引的数字
+//
+//                样例
+//        样例 1:
+//
+//        输入:  [1, 2, 3, 4], index1 = 2, index2 = 3
+//        输出:  交换后你的数组应该是[1, 2, 4, 3]， 不需要返回任何值，只要就地对数组进行交换即可。
+//        样例解释: 就地交换，不需要返回值。
+        int [] A = {1,2,3,4};
+        swapInteger(A,2,3);
+    }
+    public  void swapInteger(int[] A, int index1 , int index2 ) {
+        int t =A[index1];
+        A[index1] =A[index2];
+        A[index2 ] =t;
+        Arrays.stream(A).forEach(d ->{
+            System.out.println(d);
+        });
+    }
+
+//    给出一个字符c，你需要判断它是不是一个数字字符或者字母字符。
+//    如果是，返回true，如果不是返回false。
+    @Test
+    public void isAlphanumeric() {
+        // write your code here
+         char c ='测';
+         boolean b = Character.isDigit(c) || Character.isLetter(c);
+        System.out.println(b);
+
+    }
+
+    @Test
+    public void printX() {
+        int n= 2;
+        List<String> ret =  new ArrayList<>();
+
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < n; ++i) {
+            sb.setLength(0);
+            for (int j = 0; j < n; ++j) {
+                if (j == i || j == n - 1 - i) {
+                    sb.append('X');
+                } else {
+                    sb.append(' ');
+                }
+            }
+            ret.add(sb.toString());
+        }
+        System.out.println(ret);
+
+    }
+
+    @Test
+    public void reverseInteger() {
+        //反转一个只有3位数的整数。
+        int number =100;
+        String value = new StringBuilder(number+"").reverse().toString();
+        Integer a= Integer.parseInt(value);
+        System.out.println(a);
+
+    }
+
+    @Test
+    public void Solution () {
+//        大小写转换
+            char c ='c';
+        System.out.println(lowercaseToUppercase(c));
+    }
+    public char lowercaseToUppercase(char character) {
+        // write your code here
+        return (char) (character-32);
+    }
+
+    @Test
+    public void fibonacci () {
+//        Long n ;
+
+    }
+
 }
