@@ -41,6 +41,7 @@
                     class="music icon"></i>音乐盒</a>
             <a href="#" th:href="@{/about}" class="m-item green item m-mobile-hide" th:classappend="${n==8}?'active'"><i
                     class=" info icon"></i>关于我</a>
+
             <div class="right m-item item m-mobile-hide">
                 <form name="search" action="#" method="post" th:action="@{/search}" target="_blank">
                     <div class="ui icon  transparent input m-margin-tb-tiny">
@@ -49,6 +50,9 @@
                     </div>
                 </form>
             </div>
+
+            <a href="#" th:href="@{/admin}" class="m-item green item m-mobile-hide" th:classappend="${n==9}?'active'">登陆</a>
+
         </div>
     </div>
     <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
