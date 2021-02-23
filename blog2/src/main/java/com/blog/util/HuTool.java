@@ -331,6 +331,13 @@ public class HuTool extends Convert {
     @Test
     public void fibonacci () {
 //        Long n ;
+        int i=1;
+//        int j = (++i) + (++i);
+        if ((++i) + (++i) ==6) {
+            System.out.println("ub");
+        }
+
+
 
     }
 
