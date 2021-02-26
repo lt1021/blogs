@@ -7,6 +7,7 @@ import com.blog.pojo.Picture;
 import com.jcraft.jsch.*;
 import lombok.extern.slf4j.Slf4j;
 import net.coobird.thumbnailator.Thumbnails;
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
@@ -15,6 +16,7 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.*;
+import java.net.URL;
 import java.util.UUID;
 
 /**
@@ -281,6 +283,60 @@ public class FileUpDownload {
             }
         }
         return isDirExistFlag;
+    }
+
+    /**
+     * 获取路径下文件文本
+     *
+     * @param fileName
+     * @return
+     * @throws FileNotFoundException
+     */
+    public static String readFileToString(String fileName) throws FileNotFoundException {
+        if (null == fileName || fileName.isEmpty())
+            return null;
+        InputStreamReader input = null;
+        try {
+            // 一次读多个字节
+            byte[] bytes = new byte[1024];
+            int read = 0;
+            input = new InputStreamReader(new FileInputStream(fileName));
+            StringBuilder builder = new StringBuilder();
+            while ((read = input.read()) != -1) {
+                builder.append((char) read);
+            }
+            return builder.toString();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        } finally {
+            try {
+                close(input);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+
+    private static void close(Object... obj) throws Exception {
+        for (Object object : obj) {
+            if (null != object) {
+                ((AutoCloseable) object).close();
+            }
+        }
+    }
+
+    /**
+     * 下载网络文件
+     *
+     * @param url
+     * @return
+     */
+    public static File downloadFile(String url, String dir, String name) throws IOException {
+        File destination = new File(dir, name);
+        FileUtils.copyURLToFile(new URL(url), destination);
+        return destination;
     }
 
 

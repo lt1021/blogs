@@ -45,21 +45,38 @@
           </div>
           <div class="ui bottom attached segment">
             <a href="#" class="ui circular icon button"><i class="github icon"></i></a>
+            <!--<a href="https://github.com/oneStarLR/" target="_blank" class="ui github circular icon button" data-content="点击跳转GitHub" data-position="bottom center"><i class="github icon"></i></a>-->
             <a href="#" class="ui wechat circular icon button"><i class="weixin icon"></i></a>
             <a href="#" class="ui qq circular icon button" data-content="2811499930" data-position="bottom center"><i class="qq icon"></i></a>
           </div>
 
           <div class="ui wechat-qr flowing popup transition hidden">
             <img src="../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}" alt="" class="ui rounded image" style="width: 110px">
+            <div align="center">微信</div>
+          </div>
+          <div class="ui qq-qr flowing popup transition hidden">
+            <img src="../static/images/ltQQ.jpg" th:src="@{/images/ltQQ.jpg}" alt="" class="ui rounded image" style="width: 110px">
+            <div align="center">QQ</div>
           </div>
         </div>
       </div>
+
+
+
 
     </div>
   </div>
 
   <br>
   <br>
+  <br>
+  <br><br>
+  <br><br>
+  <br><br>
+  <br>
+
+
+
 
   <!--底部footer-->
   <footer th:replace="_fragments :: footer" class="ui inverted vertical segment m-padded-tb-massive">
@@ -72,15 +89,43 @@
   </th:block>
 
   <script>
-    $('.menu.toggle').click(function () {
-      $('.m-item').toggleClass('m-mobile-hide');
-    });
 
-    $('.wechat').popup({
-      popup : $('.wechat-qr'),
-      position: 'bottom center'
-    });
-    $('.qq').popup();
+
+
+      $('.menu.toggle').click(function () {
+          $('.m-item').toggleClass('m-mobile-hide');
+      });
+
+
+      // // 显示公众号
+      // $('.tencent').popup({
+      //     popup : $('.tencent-qr'),
+      //     position: 'bottom center'
+      // });
+
+      // 显示微信
+      $('.wechat').popup({
+          popup : $('.wechat-qr'),
+          position: 'bottom center'
+      });
+      //
+      // // 显示QQ
+      $('.qq').popup({
+          popup : $('.qq-qr'),
+          position: 'bottom top'
+      });
+      // // 显示邮箱
+      // $('.email').popup();
+      //
+      // // 显示CSDN
+      // $('.csdn').popup();
+
+      // 显示github
+      // $('.github').popup();
+
+
+
+
 
   </script>
 </body>

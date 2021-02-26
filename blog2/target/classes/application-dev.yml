@@ -5,9 +5,9 @@ spring:
     username: root
     password:
   servlet:
-    #    设置文件上传最大值
     multipart:
-      max-file-size: 10MB
+      max-file-size: 100MB
+      max-request-size: 100MB
 
 pagehelper:                #分页插件
   helper-dialect: mysql
@@ -29,18 +29,19 @@ logging:  #日志级别
   #开发环境
 server:
   port: 8082
-#自定义文件上传路径，用于Controller层
-filePath: /home/image
 
-ImageUpload:
-  address: /usr/local/nginx/html/images/
-  imageport: 80
-  server: 192.168.7.109
-  FTP_PORT: 21
-  FTP_USERNAME: root
-  FTP_PASSWORD: root
 # file:
 #  upload:
 #    path: F://images/
 #    relative: /images/**
+remoteServer.url : /home/image
+remoteServer.username : root
+remoteServer.password : 2000101LiuTao
+
+file:
+  dirPath: ${DIR_PATH:/file} #这个是docker映射的路径,本地路径
+  template:
+    path: ${TEMPLATE_PATH:/templates} #这个是导出模板所有在的服务的域名(包括http://)
+  isStatis: ${IS_STATIC:true} #表示是否做映射
+  domain: ${DOMAIN:http://ltandqly.top/}
 
