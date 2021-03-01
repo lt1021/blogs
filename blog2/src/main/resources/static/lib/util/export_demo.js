@@ -5,7 +5,7 @@ function ex(args) {
     //定义Java对象
     var Obj = Java.type('java.util.ArrayList');
     var obj = new Obj();
-    // var ApplicationContextUtil = Java.type("com.we7.erp.base.util.ApplicationContextUtil");
+    // var ApplicationContextUtil = Java.type("com.we7.erp.base.com.blog.util.ApplicationContextUtil");
     var ApplicationContextUtil = Java.type("com.blog.base.util.ApplicationContextUtil");
     //调用Java对象的方法
     var orderInfoService = ApplicationContextUtil.getBean("orderInfoServiceImpl");
