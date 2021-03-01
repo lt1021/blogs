@@ -240,6 +240,20 @@
 			<!--<version>${poi-ooxml.version}</version>-->
 		<!--</dependency>-->
 
+		<!--JSON-->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.71</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.73</version>
+			<scope>compile</scope>
+		</dependency>
+
 
 	</dependencies>
 
