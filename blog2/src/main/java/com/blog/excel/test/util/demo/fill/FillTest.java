@@ -3,6 +3,7 @@ package com.blog.excel.test.util.demo.fill;
 import com.alibaba.excel.EasyExcel;
 import com.alibaba.excel.ExcelWriter;
 import com.alibaba.excel.enums.WriteDirectionEnum;
+import com.alibaba.excel.write.merge.LoopMergeStrategy;
 import com.alibaba.excel.write.metadata.WriteSheet;
 import com.alibaba.excel.write.metadata.fill.FillConfig;
 import com.alibaba.excel.write.metadata.fill.FillWrapper;
@@ -219,7 +220,8 @@ public class FillTest {
         // 模板注意 用{} 来表示你要用的变量 如果本来就有"{","}" 特殊字符 用"\{","\}"代替
         // 填充list 的时候还要注意 模板中{.} 多了个点 表示list
         String templateFileName =
-                TestFileUtil.getPath() + "product_order_tl_cn.xls";
+//                TestFileUtil.getPath() + "product_order_tl_cn.xls";
+                TestFileUtil.getPath() + "demo1.xlsx";
 
         String fileName = null;
         // 方案1 一下子全部放到内存里面 并填充
@@ -228,15 +230,54 @@ public class FillTest {
 //        EasyExcel.write(fileName).withTemplate(templateFileName).sheet().doFill(data());
 
         // 方案2 分多次 填充 会使用文件缓存（省内存）
-        fileName = TestFileUtil.getPath() + "listFill" + System.currentTimeMillis() + ".xls";
-        ExcelWriter excelWriter = EasyExcel.write(fileName).withTemplate(templateFileName).build();
+        fileName = TestFileUtil.getPath() + "listFill" + System.currentTimeMillis() + ".xlsx";
+        LoopMergeStrategy loopMergeStrategy = new LoopMergeStrategy(2, 0);
+        ExcelWriter excelWriter = EasyExcel.write(fileName).registerWriteHandler(loopMergeStrategy).withTemplate(templateFileName).build();
         WriteSheet writeSheet = EasyExcel.writerSheet().build();
-        excelWriter.fill(data(), writeSheet);
-        excelWriter.fill(data(), writeSheet);
+        FillConfig fillConfig = FillConfig.builder().direction(WriteDirectionEnum.HORIZONTAL).build();
+//        excelWriter.fill(exportList(),writeSheet);
+
+        excelWriter.fill(horizontalxportList(),fillConfig, writeSheet);
+
+
+        excelWriter.fill(exportMap(), writeSheet);
         // 千万别忘记关闭流
         excelWriter.finish();
     }
 
+    private List<Map<String, Object>> exportList(){
+        List< Map<String, Object>> mapList  = new ArrayList<>();
+        for (int i = 0 ; i< 5 ; i++) {
+            Map<String,Object> m = new HashMap<>();
+            m.put("codes","codes"+i);
+            m.put("typeName","typeName"+i);
+            m.put("image","typeName"+i);
+            m.put("produceCruces","produceCruces"+i);
+            mapList.add(m);
+
+        }
+        return mapList;
+    }
+
+    private List<Map<String, Object>> horizontalxportList(){
+        List< Map<String, Object>> mapList  = new ArrayList<>();
+        for (int i = 0 ; i< 5 ; i++) {
+            Map<String,Object> m = new HashMap<>();
+            m.put("size","size"+i);
+            m.put("sizeleng","sizeleng"+i);
+            mapList.add(m);
+
+        }
+        return mapList;
+    }
+
+    private Map<String, Object> exportMap(){
+        Map<String,Object> map = new HashMap<>();
+        map.put("codes","订单编号001");
+        map.put("count","100");
+        map.put("materName","材质狼嚎");
+        return map;
+    }
 
     private List<FillData> data() {
         List<FillData> list = new ArrayList<FillData>();
