@@ -1,4 +1,4 @@
-package com.blog.excel.test.util.demo.write;
+package com.blog.excel.easyExcel.util.demo.write;
 
 import com.alibaba.excel.EasyExcel;
 import com.alibaba.excel.ExcelWriter;
@@ -16,7 +16,7 @@ import com.alibaba.excel.write.metadata.style.WriteCellStyle;
 import com.alibaba.excel.write.metadata.style.WriteFont;
 import com.alibaba.excel.write.style.HorizontalCellStyleStrategy;
 import com.alibaba.excel.write.style.column.LongestMatchColumnWidthStyleStrategy;
-import com.blog.excel.test.util.TestFileUtil;
+import com.blog.excel.easyExcel.util.test.TestFileUtil;
 import jdk.nashorn.internal.ir.annotations.Ignore;
 import org.apache.poi.ss.usermodel.FillPatternType;
 import org.apache.poi.ss.usermodel.IndexedColors;

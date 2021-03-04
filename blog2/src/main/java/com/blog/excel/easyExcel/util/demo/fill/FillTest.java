@@ -1,4 +1,4 @@
-package com.blog.excel.test.util.demo.fill;
+package com.blog.excel.easyExcel.util.demo.fill;
 
 import com.alibaba.excel.EasyExcel;
 import com.alibaba.excel.ExcelWriter;
@@ -7,7 +7,7 @@ import com.alibaba.excel.write.merge.LoopMergeStrategy;
 import com.alibaba.excel.write.metadata.WriteSheet;
 import com.alibaba.excel.write.metadata.fill.FillConfig;
 import com.alibaba.excel.write.metadata.fill.FillWrapper;
-import com.blog.excel.test.util.TestFileUtil;
+import com.blog.excel.easyExcel.util.test.TestFileUtil;
 import jdk.nashorn.internal.ir.annotations.Ignore;
 import org.testng.annotations.Test;
 

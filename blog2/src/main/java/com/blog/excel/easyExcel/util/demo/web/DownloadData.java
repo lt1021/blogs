@@ -1,6 +1,5 @@
-package com.blog.excel.test.util.demo.write;
+package com.blog.excel.easyExcel.util.demo.web;
 
-import com.alibaba.excel.annotation.ExcelIgnore;
 import com.alibaba.excel.annotation.ExcelProperty;
 import lombok.Data;
 
@@ -12,16 +11,11 @@ import java.util.Date;
  * @author Jiaju Zhuang
  **/
 @Data
-public class DemoData {
+public class DownloadData {
     @ExcelProperty("字符串标题")
     private String string;
     @ExcelProperty("日期标题")
     private Date date;
     @ExcelProperty("数字标题")
     private Double doubleData;
-    /**
-     * 忽略这个字段
-     */
-    @ExcelIgnore
-    private String ignore;
 }
