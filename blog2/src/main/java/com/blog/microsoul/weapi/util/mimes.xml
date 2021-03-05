@@ -1,0 +1,207 @@
+<!-- ===================== Default MIME Type Mappings =================== -->
+<!-- When serving static resources, Tomcat will automatically generate    -->
+<!-- a "Content-Type" header based on the resource's filename extension,  -->
+<!-- based on these mappings.  Additional mappings can be added here (to  -->
+<!-- apply to all web robots), or in your own application's web.xml -->
+<!-- deployment descriptor.                                               -->
+<mimes>
+    <mime extension="folder" mime-type="application/folder" cls="z-folder" text="application/folder"/>
+    <!--audio-->
+    <mime extension="aiff" mime-type="audio/x-aiff" cls="audio_x-aiff" text="audio_x-aiff"/>
+    <mime extension="au" mime-type="audio/basic" cls="audio_basic" text="audio/basic"/>
+    <mime extension="kar" mime-type="audio/x-midi" cls="audio_x-midi" text="audio/x-midi"/>
+    <mime extension="m3u" mime-type="audio/x-mpegurl" cls="audio_x-mpegurl" text="audio/x-mpegurl"/>
+    <mime extension="mid" mime-type="audio/x-midi" cls="audio_x-midi" text="audio/x-midi"/>
+    <mime extension="midi" mime-type="audio/x-midi" cls="audio_x-midi" text="audio/x-midi"/>
+    <mime extension="mp1" mime-type="audio/x-mpeg" cls="audio_x-mpeg" text="audio/x-mpeg"/>
+    <mime extension="mp2" mime-type="audio/x-mpeg" cls="audio_x-mpeg" text="audio/x-mpeg"/>
+    <mime extension="mp3" mime-type="audio/x-mpeg" cls="audio_x-mpeg" text="audio/x-mpeg"/>
+    <mime extension="mp4" mime-type="video/mp4" cls="video_mp4" text="video/mp4"/>
+    <mime extension="mpa" mime-type="audio/x-mpeg" cls="audio_x-mpeg" text="audio/x-mpeg"/>
+    <mime extension="mpega" mime-type="audio/x-mpeg" cls="audio_x-mpeg" text="audio/x-mpeg"/>
+    <mime extension="pls" mime-type="audio/x-scpls" cls="audio_x-scpls" text="audio/x-scpls"/>
+    <mime extension="smf" mime-type="audio/x-midi" cls="audio_x-midi" text="audio/x-midi"/>
+    <mime extension="snd" mime-type="audio/basic" cls="audio_basic" text="audio/basic"/>
+    <mime extension="ulw" mime-type="audio/basic" cls="audio_basic" text="audio/basic"/>
+    <mime extension="wav" mime-type="audio/x-wav" cls="audio_x-wav" text="audio/x-wav"/>
+    <!--image-->
+    <mime extension="art" mime-type="image/x-jg" cls="image_x-jg" text="image/x-jg"/>
+    <mime extension="bmp" mime-type="image/bmp" cls="image_bmp" text="image/bmp"/>
+    <mime extension="dib" mime-type="image/bmp" cls="image_bmp" text="image/bmp"/>
+    <mime extension="gif" mime-type="image/gif" cls="image_gif" text="image/gif"/>
+    <mime extension="ief" mime-type="image/ief" cls="image_ief" text="image/ief"/>
+    <mime extension="jpe" mime-type="image/jpeg" cls="image_jpeg" text="image/jpeg"/>
+    <mime extension="jpeg" mime-type="image/jpeg" cls="image_jpeg" text="image/jpeg"/>
+    <mime extension="jpg" mime-type="image/jpeg" cls="image_jpeg" text="image/jpeg"/>
+    <mime extension="mac" mime-type="image/x-macpaint" cls="image_x-macpaint" text="image/x-macpaint"/>
+    <mime extension="pbm" mime-type="image/x-portable-bitmap" cls="image_x-portable-bitmap"
+          text="image/x-portable-bitmap"/>
+    <mime extension="pct" mime-type="image/pict" cls="image_pict" text="image/pict"/>
+    <mime extension="pgm" mime-type="image/x-portable-graymap" cls="image_x-portable-graymap"
+          text="image/x-portable-graymap"/>
+    <mime extension="pic" mime-type="image/pict" cls="image_pict" text="image/pict"/>
+    <mime extension="pict" mime-type="image/pict" cls="image_pict" text="image/pict"/>
+    <mime extension="png" mime-type="image/png" cls="image_png" text="image/png"/>
+    <mime extension="pnm" mime-type="image/x-portable-anymap" cls="image_x-portable-anymap"
+          text="image/x-portable-anymap"/>
+    <mime extension="pnt" mime-type="image/x-macpaint" cls="image_x-macpaint" text="image/x-macpaint"/>
+    <mime extension="ppm" mime-type="image/x-portable-pixmap" cls="image_x-portable-pixmap"
+          text="image/x-portable-pixmap"/>
+    <mime extension="psd" mime-type="image/x-photoshop" cls="image_x-photoshop" text="image/x-photoshop"/>
+    <mime extension="qti" mime-type="image/x-quicktime" cls="image_x-quicktime" text="image/x-quicktime"/>
+    <mime extension="qtif" mime-type="image/x-quicktime" cls="image_x-quicktime" text="image/x-quicktime"/>
+    <mime extension="ras" mime-type="image/x-cmu-raster" cls="image_x-cmu-raster" text="image/x-cmu-raster"/>
+    <mime extension="rgb" mime-type="image/x-rgb" cls="image_x-rgb" text="image/x-rgb"/>
+    <mime extension="tif" mime-type="image/tiff" cls="image_tiff" text="image/tiff"/>
+    <mime extension="tiff" mime-type="image/tiff" cls="image_tiff" text="image/tiff"/>
+    <mime extension="xbm" mime-type="image/x-xbitmap" cls="image_x-xbitmap" text="image/x-xbitmap"/>
+    <mime extension="xpm" mime-type="image/x-xpixmap" cls="image_x-xpixmap" text="image/x-xpixmap"/>
+    <mime extension="xwd" mime-type="image/x-xwindowdump" cls="image_x-xwindowdump" text="image/x-xwindowdump"/>
+    <mime extension="svg" mime-type="image/svg+xml" cls="image_svg+xml" text="image/svg+xml"/>
+    <mime extension="svgz" mime-type="image/svg+xml" cls="image_svg+xml" text="image/svg+xml"/>
+    <mime extension="wbmp" mime-type="image/vnd.wap.wbmp" cls="image_vnd.wap.wbmp" text="image/vnd.wap.wbmp"/>
+
+    <!--video-->
+    <mime extension="asf" mime-type="video/x-ms-asf" cls="video_x-ms-asf" text="video/x-ms-asf"/>
+    <mime extension="asx" mime-type="video/x-ms-asf" cls="video_x-ms-asf" text="video/x-ms-asf"/>
+    <mime extension="avi" mime-type="video/x-msvideo" cls="video_x-msvideo" text="video/x-msvideo"/>
+    <mime extension="avx" mime-type="video/x-rad-screenplay" cls="video_x-rad-screenplay"
+          text="video/x-rad-screenplay"/>
+    <mime extension="dv" mime-type="video/x-dv" cls="video_x-dv" text="video/x-dv"/>
+    <mime extension="mov" mime-type="video/quicktime" cls="video_quicktime" text="video/quicktime"/>
+    <mime extension="movie" mime-type="video/x-sgi-movie" cls="video_x-sgi-movie" text="video/x-sgi-movie"/>
+    <mime extension="mpe" mime-type="video/mpeg" cls="video_mpeg" text="video/mpeg"/>
+    <mime extension="mpeg" mime-type="video/mpeg" cls="video_mpeg" text="video/mpeg"/>
+    <mime extension="mpg" mime-type="video/mpeg" cls="video_mpeg" text="video/mpeg"/>
+    <mime extension="mpv2" mime-type="video/mpeg2" cls="video_mpeg2" text="video/mpeg2"/>
+    <mime extension="qt" mime-type="video/quicktime" cls="video_quicktime" text="video/quicktime"/>
+    <mime extension="wmv" mime-type="video/x-ms-wmv" cls="video_x-ms-wmv" text="video/x-ms-wmv"/>
+    <!--application-->
+    <mime extension="bcpio" mime-type="application/x-bcpio" cls="application_x-bcpio" text="application/x-bcpio"/>
+    <mime extension="bin" mime-type="application/octet-stream" cls="application_octet-stream"
+          text="application/octet-stream"/>
+    <mime extension="cdf" mime-type="application/x-cdf" cls="application_x-cdf" text="application/x-cdf"/>
+    <mime extension="cer" mime-type="application/x-x509-ca-cert" cls="application_x-x509-ca-cert"
+          text="application/x-x509-ca-cert"/>
+    <mime extension="class" mime-type="application/java" cls="application_java" text="application/java"/>
+    <mime extension="cpio" mime-type="application/x-cpio" cls="application_x-cpio" text="application/x-cpio"/>
+    <mime extension="csh" mime-type="application/x-csh" cls="application_x-csh" text="application/x-csh"/>
+    <mime extension="doc" mime-type="application/msword" cls="application_msword" text="application/msword"/>
+    <mime extension="dtd" mime-type="application/xml-dtd" cls="application_xml-dtd" text="application/xml-dtd"/>
+    <mime extension="dvi" mime-type="application/x-dvi" cls="application_x-dvi" text="application/x-dvi"/>
+    <mime extension="eps" mime-type="application/postscript" cls="application_postscript"
+          text="application/postscript"/>
+    <mime extension="exe" mime-type="application/octet-stream" cls="application_octet-stream"
+          text="application/octet-stream"/>
+    <mime extension="gtar" mime-type="application/x-gtar" cls="application_x-gtar" text="application/x-gtar"/>
+    <mime extension="gz" mime-type="application/x-gzip" cls="application_x-gzip" text="application/x-gzip"/>
+    <mime extension="hdf" mime-type="application/x-hdf" cls="application_x-hdf" text="application/x-hdf"/>
+    <mime extension="hqx" mime-type="application/mac-binhex40" cls="application_mac-binhex40"
+          text="application/mac-binhex40"/>
+    <mime extension="hqx" mime-type="application/mac-binhex40" cls="application_mac-binhex40"
+          text="application/mac-binhex40"/>
+    <mime extension="jar" mime-type="application/java-archive" cls="application_java-archive"
+          text="application/java-archive"/>
+    <mime extension="jnlp" mime-type="application/x-java-jnlp-file" cls="application_x-java-jnlp-file"
+          text="application/x-java-jnlp-file"/>
+    <mime extension="latex" mime-type="application/x-latex" cls="application_x-latex" text="application/x-latex"/>
+    <mime extension="man" mime-type="application/x-troff-man" cls="application_x-troff-man"
+          text="application/x-troff-man"/>
+    <mime extension="mathml" mime-type="application/mathml+xml" cls="application_mathml+xml"
+          text="application/mathml+xml"/>
+    <mime extension="me" mime-type="application/x-troff-me" cls="application_x-troff-me"
+          text="application/x-troff-me"/>
+    <mime extension="mif" mime-type="application/x-mif" cls="application_x-mif" text="application/x-mif"/>
+    <mime extension="ms" mime-type="application/x-wais-source" cls="application_x-wais-source"
+          text="application/x-wais-source"/>
+    <mime extension="nc" mime-type="application/x-netcdf" cls="application_x-netcdf" text="application/x-netcdf"/>
+    <mime extension="oda" mime-type="application/oda" cls="application_oda" text="application/oda"/>
+    <mime extension="pdf" mime-type="application/pdf" cls="application_pdf" text="application/pdf"/>
+    <mime extension="ppt" mime-type="application/powerpoint" cls="application_powerpoint"
+          text="application/powerpoint"/>
+    <mime extension="ps" mime-type="application/postscript" cls="application_postscript"
+          text="application/postscript"/>
+    <mime extension="wmlc" mime-type="application/vnd.wap.wmlc" cls="application_vnd.wap.wmlc"
+          text="application/vnd.wap.wmlc"/>
+    <mime extension="wmlscriptc" mime-type="application/vnd.wap.wmlscriptc" cls="application_vnd.wap.wmlscriptc"
+          text="application/vnd.wap.wmlscriptc"/>
+    <mime extension="wspolicy" mime-type="application/wspolicy+xml" cls="application_wspolicy+xml"
+          text="application/wspolicy+xml"/>
+    <mime extension="Z" mime-type="application/x-compress" cls="application_x-compress"
+          text="application/x-compress"/>
+    <mime extension="z" mime-type="application/x-compress" cls="application_x-compress"
+          text="application/x-compress"/>
+    <mime extension="zip" mime-type="application/zip" cls="application_zip" text="application/zip"/>
+    <mime extension="xls" mime-type="application/vnd.ms-excel" cls="application_excel"
+          text="application/vnd.ms-excel"/>
+    <mime extension="doc" mime-type="application/vnd.ms-word" cls="application_msword"
+          text="application/vnd.ms-word"/>
+    <mime extension="ppt" mime-type="application/vnd.ms-powerpoint" cls="application_vnd.ms-powerpoint"
+          text="application/vnd.ms-powerpoint"/>
+    <mime extension="ai" mime-type="application/postscript" cls="application_postscript"
+          text="application/postscript"/>
+    <mime extension="aim" mime-type="application/x-aim" cls="application_x-aim" text="application/x-aim"/>
+    <mime extension="rdf" mime-type="application/rdf+xml" cls="application_rdf+xml" text="application/rdf+xml"/>
+    <mime extension="rm" mime-type="application/vnd.rn-realmedia" cls="application_vnd.rn-realmedia"
+          text="application/vnd.rn-realmedia"/>
+    <mime extension="roff" mime-type="application/x-troff" cls="application_x-troff" text="application/x-troff"/>
+    <mime extension="rtf" mime-type="application/rtf" cls="application_rtf" text="application/rtf"/>
+    <mime extension="sh" mime-type="application/x-sh" cls="application_x-sh" text="application/x-sh"/>
+    <mime extension="shar" mime-type="application/x-shar" cls="application_x-shar" text="application/x-shar"/>
+    <mime extension="src" mime-type="application/x-wais-source" cls="application_x-wais-source"
+          text="application/x-wais-source"/>
+    <mime extension="sv4cpio" mime-type="application/x-sv4cpio" cls="application_x-sv4cpio"
+          text="application/x-sv4cpio"/>
+    <mime extension="sv4crc" mime-type="application/x-sv4crc" cls="application_x-sv4crc"
+          text="application/x-sv4crc"/>
+    <mime extension="swf" mime-type="application/x-shockwave-flash" cls="application_x-shockwave-flash"
+          text="application/x-shockwave-flash"/>
+    <mime extension="t" mime-type="application/x-troff" cls="application_x-troff" text="application/x-troff"/>
+    <mime extension="tar" mime-type="application/x-tar" cls="application_x-tar" text="application/x-tar"/>
+    <mime extension="tcl" mime-type="application/x-tcl" cls="application_x-tcl" text="application/x-tcl"/>
+    <mime extension="tex" mime-type="application/x-tex" cls="application_x-tex" text="application/x-tex"/>
+    <mime extension="texi" mime-type="application/x-texinfo" cls="application_x-texinfo"
+          text="application/x-texinfo"/>
+    <mime extension="texinfo" mime-type="application/x-texinfo" cls="application_x-texinfo"
+          text="application/x-texinfo"/>
+    <mime extension="sit" mime-type="application/x-stuffit" cls="application_x-stuffit"
+          text="application/x-stuffit"/>
+    <mime extension="vsd" mime-type="application/x-visio" cls="application_x-visio" text="application/x-visio"/>
+    <mime extension="tr" mime-type="application/x-troff" cls="application_x-troff" text="application/x-troff"/>
+    <mime extension="ustar" mime-type="application/x-ustar" cls="application_x-ustar" text="application/x-ustar"/>
+    <mime extension="vxml" mime-type="application/voicexml+xml" cls="application_voicexml+xml"
+          text="application/voicexml+xml"/>
+    <mime extension="xht" mime-type="application/xhtml+xml" cls="application_xhtml+xml"
+          text="application/xhtml+xml"/>
+    <mime extension="xhtml" mime-type="application/xhtml+xml" cls="application_xhtml+xml"
+          text="application/xhtml+xml"/>
+    <mime extension="xml" mime-type="application/xml" cls="application_xml" text="application/xml"/>
+    <mime extension="xsl" mime-type="application/xml" cls="application_xml" text="application/xml"/>
+    <mime extension="xslt" mime-type="application/xslt+xml" cls="application_xslt+xml" text="application/xslt+xml"/>
+    <mime extension="xul" mime-type="application/vnd.mozilla.xul+xml" cls="application_vnd.mozilla.xul+xml"
+          text="application/vnd.mozilla.xul+xml"/>
+    <!--text-->
+    <mime extension="body" mime-type="text/html" cls="text_html" text="text/html"/>
+    <mime extension="css" mime-type="text/css" cls="text_css" text="text/css"/>
+    <mime extension="etx" mime-type="text/x-setext" cls="text_x-setext" text="text/x-setext"/>
+    <mime extension="htc" mime-type="text/x-component" cls="text_x-component" text="text/x-component"/>
+    <mime extension="htm" mime-type="text/html" cls="text_html" text="text/html"/>
+    <mime extension="html" mime-type="text/html" cls="text_html" text="text/html"/>
+    <mime extension="jad" mime-type="text/vnd.sun.j2me.app-descriptor" cls="text_vnd.sun.j2me.app-descriptor"
+          text="text/vnd.sun.j2me.app-descriptor"/>
+    <mime extension="java" mime-type="text/plain" cls="text_plain" text="text/plain"/>
+    <mime extension="js" mime-type="text/javascript" cls="text_javascript" text="text/javascript"/>
+    <mime extension="jsf" mime-type="text/plain" cls="text_plain" text="text/plain"/>
+    <mime extension="jspf" mime-type="text/plain" cls="text_plain" text="text/plain"/>
+    <mime extension="rtx" mime-type="text/richtext" cls="text_richtext" text="text/richtext"/>
+    <mime extension="shtml" mime-type="text/x-server-parsed-html" cls="text_x-server-parsed-html"
+          text="text/x-server-parsed-html"/>
+    <mime extension="wml" mime-type="text/vnd.wap.wml" cls="text_vnd.wap.wml" text="text/vnd.wap.wml"/>
+    <mime extension="wmls" mime-type="text/vnd.wap.wmlscript" cls="text_vnd.wap.wmlscript"
+          text="text/vnd.wap.wmlscript"/>
+    <mime extension="tsv" mime-type="text/tab-separated-values" cls="text_tab-separated-values"
+          text="text/tab-separated-values"/>
+    <mime extension="txt" mime-type="text/plain" cls="text_plain" text="text/plain"/>
+    <mime extension="wrl" mime-type="x-world/x-vrml" cls="x-world_x-vrml" text="x-world/x-vrml"/>
+
+</mimes>

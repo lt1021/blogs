@@ -409,6 +409,10 @@ public class FileUpDownload {
         return flag;
     }
 
+    public static String getTemplate() {
+        return template;
+    }
+
 
 
 

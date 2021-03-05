@@ -8,10 +8,8 @@ import org.apache.poi.hssf.usermodel.*;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.*;
 import org.openxmlformats.schemas.drawingml.x2006.spreadsheetDrawing.CTMarker;
-import org.openxmlformats.schemas.drawingml.x2006.spreadsheetDrawing.CTPicture;
 import org.testng.annotations.Test;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -141,9 +139,9 @@ public class ExcelHepl {
             if (shape instanceof HSSFPicture) {
                 HSSFPicture picture = (HSSFPicture) shape;
                 HSSFClientAnchor cAnchor = (HSSFClientAnchor) picture.getAnchor();
-                PictureData pdata = picture.getPictureData();
+//                PictureData pdata = picture.getPictureData();
                 String key = cAnchor.getRow1() + "-" + cAnchor.getCol1(); // 行号-列号
-                map.put(key, pdata);
+//                map.put(key, pdata);
             }
         }
         return map;
