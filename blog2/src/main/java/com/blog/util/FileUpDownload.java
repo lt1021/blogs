@@ -340,6 +340,75 @@ public class FileUpDownload {
     }
 
 
+    /**
+     * 获取路径下文件的字节数组
+     *
+     * @param fileName
+     * @return
+     * @throws FileNotFoundException
+     */
+    public static byte[] readFileByBytes(String fileName) {
+        if (null == fileName || fileName.isEmpty())
+            return null;
+        InputStream input = null;
+        ByteArrayOutputStream output = null;
+        try {
+            // 一次读多个字节
+            byte[] bytes = new byte[1024];
+            int read = 0;
+            input = new FileInputStream(fileName);
+            output = new ByteArrayOutputStream((int) new File(fileName).length());
+            while ((read = input.read(bytes)) != -1) {
+                output.write(bytes, 0, read);
+            }
+            return output.toByteArray();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        } finally {
+            try {
+                close(input, output);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+
+    /**
+     * 删除指定文件夹下所有文件
+     *
+     * @param path 文件夹完整绝对路径
+     */
+    public static boolean delAllFile(String path) {
+        boolean flag = false;
+        File file = new File(path);
+        if (!file.exists()) {
+            return flag;
+        }
+        String[] tempList = file.list();
+        File temp = null;
+        for (int i = 0; i < tempList.length; i++) {
+            if (path.endsWith(File.separator)) {
+                temp = new File(path + tempList[i]);
+            } else {
+                temp = new File(path + File.separator + tempList[i]);
+            }
+            //是文件
+            if (temp.isFile()) {
+                temp.delete();
+                flag = true;
+            }
+            //是文件夹
+            if (temp.isDirectory()) {
+                //先删除文件夹里面的文件
+                delAllFile(path + "/" + tempList[i]);
+                flag = true;
+            }
+        }
+        return flag;
+    }
+
 
 
 
