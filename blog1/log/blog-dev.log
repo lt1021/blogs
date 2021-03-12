@@ -283,7 +283,7 @@ Caused by: java.net.ConnectException: Connection refused: connect
 	... 110 common frames omitted
 
 2020-08-26 09:22:41.645  INFO 6844 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
-2020-08-26 09:22:41.664  INFO 6844 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+2020-08-26 09:22:41.664  INFO 6844 --- [main] o.hibernate.jpa.internal.com.blog.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
 2020-08-26 09:22:41.944  INFO 6844 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
@@ -840,7 +840,7 @@ Caused by: java.net.ConnectException: Connection refused: connect
 	... 110 common frames omitted
 
 2020-08-26 11:43:45.592  INFO 9028 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
-2020-08-26 11:43:45.624  INFO 9028 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+2020-08-26 11:43:45.624  INFO 9028 --- [main] o.hibernate.jpa.internal.com.blog.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
 2020-08-26 11:43:45.930  INFO 9028 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}

@@ -3,7 +3,7 @@
 2020-07-27 17:43:37.091  INFO 16240 --- [main] com.lrm.BlogApplicationTests             : The following profiles are active: dev
 2020-07-27 17:43:38.397  INFO 16240 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@f58853c: startup date [Mon Jul 27 17:43:38 CST 2020]; root of context hierarchy
 2020-07-27 17:43:49.769  INFO 16240 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
-2020-07-27 17:43:49.866  INFO 16240 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+2020-07-27 17:43:49.866  INFO 16240 --- [main] o.hibernate.jpa.internal.com.blog.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
 2020-07-27 17:43:50.467  INFO 16240 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
@@ -222,7 +222,7 @@ Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationExce
 2020-07-27 17:46:04.053  INFO 1500 --- [main] com.lrm.BlogApplicationTests             : The following profiles are active: dev
 2020-07-27 17:46:05.265  INFO 1500 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@1224144a: startup date [Mon Jul 27 17:46:05 CST 2020]; root of context hierarchy
 2020-07-27 17:46:13.896  INFO 1500 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
-2020-07-27 17:46:14.020  INFO 1500 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+2020-07-27 17:46:14.020  INFO 1500 --- [main] o.hibernate.jpa.internal.com.blog.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
 2020-07-27 17:46:14.401  INFO 1500 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
@@ -277,7 +277,7 @@ Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationExce
 2020-07-27 17:46:25.707  INFO 1500 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/footer/newblog],methods=[GET]}" onto public java.lang.String com.lrm.web.IndexController.newblogs(org.springframework.ui.Model)
 2020-07-27 17:46:25.721  INFO 1500 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tags/{id}],methods=[GET]}" onto public java.lang.String com.lrm.web.TagShowController.tags(org.springframework.data.domain.Pageable,java.lang.Long,org.springframework.ui.Model)
 2020-07-27 17:46:25.729  INFO 1500 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/types/{id}],methods=[GET]}" onto public java.lang.String com.lrm.web.TypeShowController.types(org.springframework.data.domain.Pageable,java.lang.Long,org.springframework.ui.Model)
-2020-07-27 17:46:25.741  INFO 1500 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-07-27 17:46:25.741  INFO 1500 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.com.blog.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
 2020-07-27 17:46:25.745  INFO 1500 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
 2020-07-27 17:46:25.987  INFO 1500 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
 2020-07-27 17:46:25.988  INFO 1500 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
@@ -291,7 +291,7 @@ Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationExce
 2020-07-27 17:47:54.893  INFO 9960 --- [main] com.lrm.BlogApplicationTests             : The following profiles are active: dev
 2020-07-27 17:47:56.318  INFO 9960 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@1224144a: startup date [Mon Jul 27 17:47:56 CST 2020]; root of context hierarchy
 2020-07-27 17:48:04.079  INFO 9960 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
-2020-07-27 17:48:04.168  INFO 9960 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+2020-07-27 17:48:04.168  INFO 9960 --- [main] o.hibernate.jpa.internal.com.blog.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
 2020-07-27 17:48:04.642  INFO 9960 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
@@ -334,7 +334,7 @@ Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationExce
 2020-07-27 17:48:14.427  INFO 9960 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/footer/newblog],methods=[GET]}" onto public java.lang.String com.lrm.web.IndexController.newblogs(org.springframework.ui.Model)
 2020-07-27 17:48:14.430  INFO 9960 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tags/{id}],methods=[GET]}" onto public java.lang.String com.lrm.web.TagShowController.tags(org.springframework.data.domain.Pageable,java.lang.Long,org.springframework.ui.Model)
 2020-07-27 17:48:14.431  INFO 9960 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/types/{id}],methods=[GET]}" onto public java.lang.String com.lrm.web.TypeShowController.types(org.springframework.data.domain.Pageable,java.lang.Long,org.springframework.ui.Model)
-2020-07-27 17:48:14.435  INFO 9960 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-07-27 17:48:14.435  INFO 9960 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.com.blog.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
 2020-07-27 17:48:14.436  INFO 9960 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
 2020-07-27 17:48:14.579  INFO 9960 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
 2020-07-27 17:48:14.579  INFO 9960 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
@@ -348,7 +348,7 @@ Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationExce
 2020-07-27 17:50:46.294  INFO 11332 --- [main] com.lrm.BlogApplicationTests             : The following profiles are active: dev
 2020-07-27 17:50:47.094  INFO 11332 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@1224144a: startup date [Mon Jul 27 17:50:47 CST 2020]; root of context hierarchy
 2020-07-27 17:51:00.857  INFO 11332 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
-2020-07-27 17:51:00.909  INFO 11332 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+2020-07-27 17:51:00.909  INFO 11332 --- [main] o.hibernate.jpa.internal.com.blog.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
 2020-07-27 17:51:01.191  INFO 11332 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
@@ -391,7 +391,7 @@ Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationExce
 2020-07-27 17:51:12.360  INFO 11332 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/footer/newblog],methods=[GET]}" onto public java.lang.String com.lrm.web.IndexController.newblogs(org.springframework.ui.Model)
 2020-07-27 17:51:12.361  INFO 11332 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tags/{id}],methods=[GET]}" onto public java.lang.String com.lrm.web.TagShowController.tags(org.springframework.data.domain.Pageable,java.lang.Long,org.springframework.ui.Model)
 2020-07-27 17:51:12.385  INFO 11332 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/types/{id}],methods=[GET]}" onto public java.lang.String com.lrm.web.TypeShowController.types(org.springframework.data.domain.Pageable,java.lang.Long,org.springframework.ui.Model)
-2020-07-27 17:51:12.392  INFO 11332 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-07-27 17:51:12.392  INFO 11332 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.com.blog.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
 2020-07-27 17:51:12.393  INFO 11332 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
 2020-07-27 17:51:12.658  INFO 11332 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
 2020-07-27 17:51:12.660  INFO 11332 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
