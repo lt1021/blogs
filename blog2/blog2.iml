@@ -150,7 +150,7 @@
     <orderEntry type="library" name="Maven: ch.ethz.ganymed:ganymed-ssh2:262" level="project" />
     <orderEntry type="library" name="Maven: com.jcraft:jsch:0.1.55" level="project" />
     <orderEntry type="library" name="Maven: net.coobird:thumbnailator:0.4.8" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-test:5.3.4" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-test:5.3.5" level="project" />
     <orderEntry type="library" name="Maven: org.testng:testng:7.0.0-beta7" level="project" />
     <orderEntry type="library" name="Maven: com.beust:jcommander:1.72" level="project" />
     <orderEntry type="library" name="Maven: com.baomidou:mybatis-plus-annotation:3.4.1" level="project" />

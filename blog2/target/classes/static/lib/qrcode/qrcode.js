@@ -511,10 +511,10 @@ var QRCode;
 	 * @class QRCode
 	 * @constructor
 	 * @example 
-	 * new QRCode(document.getElementById("EasyPoi"), "http://jindo.dev.naver.com/collie");
+	 * new QRCode(document.getElementById("test"), "http://jindo.dev.naver.com/collie");
 	 *
 	 * @example
-	 * var oQRCode = new QRCode("EasyPoi", {
+	 * var oQRCode = new QRCode("test", {
 	 *    text : "http://naver.com",
 	 *    width : 128,
 	 *    height : 128

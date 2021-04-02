@@ -1,7 +1,7 @@
 /*!
  * Test plugin for Editor.md
  *
- * @file        EasyPoi-plugin.js
+ * @file        test-plugin.js
  * @author      pandao
  * @version     1.2.0
  * @updateTime  2015-03-07
