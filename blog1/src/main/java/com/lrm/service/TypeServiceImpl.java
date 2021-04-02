@@ -12,7 +12,7 @@
 //import org.springframework.stereotype.Service;
 //import org.springframework.transaction.annotation.Transactional;
 //
-//import java.util.List;
+//import java.com.blog.util.List;
 //
 ///**
 // * Created by limi on 2017/10/16.
