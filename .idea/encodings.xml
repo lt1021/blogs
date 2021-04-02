@@ -9,6 +9,13 @@
     <file url="file://$PROJECT_DIR$/blog2/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/blog3" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/blog3/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blog4" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blog4/blog-article-crawler" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blog4/blog-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blog4/blog-encrypt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blog4/blog-eureka" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blog4/blog-extension" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blog4/blog-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
   </component>
