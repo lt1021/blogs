@@ -4,5 +4,4 @@ spring:            #全局配置
   profiles:
     active: dev
 
-
 comment.avatar: /images/avatar.jpg
