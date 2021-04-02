@@ -16,14 +16,14 @@
       <module name="blog1" target="1.8" />
       <module name="blog2" target="1.8" />
       <module name="blog3" target="1.8" />
-      <module name="blogs" target="1.5" />
+      <module name="blogs" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="blog1" options="-parameters" />
       <module name="blog2" options="-parameters" />
-      <module name="blog3" options="-parameters" />
+      <module name="blog3" options="" />
       <module name="blogs" options="" />
     </option>
   </component>
