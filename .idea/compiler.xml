@@ -43,7 +43,7 @@
       <module name="blog-server" options="-parameters" />
       <module name="blog1" options="-parameters" />
       <module name="blog2" options="-parameters" />
-      <module name="blog3" options="" />
+      <module name="blog3" options="-parameters" />
       <module name="blogs" options="" />
     </option>
   </component>
