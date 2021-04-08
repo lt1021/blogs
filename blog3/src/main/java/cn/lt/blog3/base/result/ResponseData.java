@@ -78,12 +78,12 @@ public class ResponseData<T> {
      * @param <T>
      * @return
      */
-    public static <T>ResponseData<T> data(T t){
-        ResponseData data = new ResponseData(t);
+    public static <T> ResponseData<T> data(T t) {
+        ResponseData responseData = new ResponseData(t);
         if (t instanceof Boolean) {
-            data.setStatus((boolean)t ? ResponseStatus.SUCCESS : ResponseStatus.FALL);
+            responseData.setStatus((Boolean) t ? ResponseStatus.SUCCESS : ResponseStatus.FAIL);
         }
-        return data;
+        return responseData;
     }
 
     /**
@@ -104,7 +104,7 @@ public class ResponseData<T> {
      * @return
      */
     public static ResponseData data(ResponseStatus status, String message) {
-        ResponseData responseData = new ResponseData(status, LanguageUtils.msg(message));
+        ResponseData responseData = new ResponseData(status,"");
         return responseData;
     }
 

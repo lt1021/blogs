@@ -9,17 +9,18 @@ server:
 
 spring:
   datasource:
+    #数据库配置
     url: jdbc:mysql://127.0.0.1:3306/blog?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password:
 
-
+#文件上传
   servlet:
     multipart:
       max-file-size: 100MB
       max-request-size: 100MB
-
+#plus 配置
 mybatis-plus:
   # 如果是放在src/main/java目录下 classpath:/com/yourpackage/*/mapper/*Mapper.xml
   # 如果是放在resource目录 classpath:/mapper/*Mapper.xml

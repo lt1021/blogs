@@ -368,4 +368,17 @@ public class BeanHelp {
         return null;
     }
 
+    public static Object getFieldValue(Object o, Field field) {
+        try {
+            if (Objects.isNull(field)) {
+                return null;
+            }
+            field.setAccessible(true);
+            return field.get(o);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
 }

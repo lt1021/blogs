@@ -15,7 +15,7 @@ public enum ResponseStatus {
     /**
      * 失败
      */
-    FALL(500),
+    FAIL(500),
 
     /**
      * 没有权限
