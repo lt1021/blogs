@@ -1,6 +1,7 @@
 package cn.lt.blog3;
 
 
+import cn.lt.blog3.base.bean.BaseInfo;
 import com.baomidou.mybatisplus.core.exceptions.MybatisPlusException;
 import com.baomidou.mybatisplus.core.toolkit.StringPool;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
@@ -8,8 +9,10 @@ import com.baomidou.mybatisplus.generator.AutoGenerator;
 import com.baomidou.mybatisplus.generator.InjectionConfig;
 import com.baomidou.mybatisplus.generator.config.*;
 import com.baomidou.mybatisplus.generator.config.po.TableInfo;
+import com.baomidou.mybatisplus.generator.config.rules.DateType;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
+import com.blog.base.service.CacheService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -57,7 +60,10 @@ public class CodeGenerator {
         gc.setOutputDir(projectPath + "/src/main/java");
         gc.setAuthor("lt");
         gc.setOpen(false);
-        // gc.setSwagger2(true); 实体属性 Swagger2 注解
+         gc.setSwagger2(true);// 实体属性 Swagger2 注解
+        gc.setDateType(DateType.ONLY_DATE);
+        gc.setFileOverride(true);
+//        gc.setEntityName()
         mpg.setGlobalConfig(gc);
 
         // 数据源配置
@@ -65,7 +71,7 @@ public class CodeGenerator {
 
         dsc.setUrl("jdbc:mysql://127.0.0.1:3306/blog?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8");
         // dsc.setSchemaName("public");
-        dsc.setDriverName("com.mysql.jdbc.Driver");
+        dsc.setDriverName("com.mysql.cj.jdbc.Driver");
         dsc.setUsername("root");
         dsc.setPassword("");
         mpg.setDataSource(dsc);
@@ -134,16 +140,16 @@ public class CodeGenerator {
         StrategyConfig strategy = new StrategyConfig();
         strategy.setNaming(NamingStrategy.underline_to_camel);
         strategy.setColumnNaming(NamingStrategy.underline_to_camel);
-        strategy.setSuperEntityClass("你自己的父类实体,没有就不用设置!");
+        // 公共父类
+        strategy.setSuperEntityClass(BaseInfo.class);
         strategy.setEntityLombokModel(true);
         strategy.setRestControllerStyle(true);
-        // 公共父类
-        strategy.setSuperControllerClass("你自己的父类控制器,没有就不用设置!");
+        strategy.setSuperServiceImplClass(CacheService.class);
         // 写于父类中的公共字段
         strategy.setSuperEntityColumns("id");
         strategy.setInclude(scanner(table_name).split(","));
         strategy.setControllerMappingHyphenStyle(true);
-        strategy.setTablePrefix(pc.getModuleName() + "_");
+//        strategy.setTablePrefix(pc.getModuleName() + "_");
         mpg.setStrategy(strategy);
         mpg.setTemplateEngine(new FreemarkerTemplateEngine());
         mpg.execute();
