@@ -48,6 +48,7 @@ public class JSUtils {
         try {
             Invocable invocable = (Invocable) engine;
             //加载脚本
+            System.out.println(JS);
             engine.eval(JS);
             Object o = invocable.invokeFunction("ex", map);
             System.out.println(o);
@@ -67,13 +68,13 @@ public class JSUtils {
         return new Object[]{};
     }
 
-    /*public static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws Exception {
         Map<String, Object> map = new HashMap<>();
 //        map.put("JS_PATH", "127.0.0.1:8082/static/js_demo/export_demo.js");
         map.put("JS_PATH", "E:\\code\\blogs\\blog2\\src\\main\\resources\\static\\js\\export_demo.js");
         map.put("blogId", 1);
         export(map);
-    }*/
+    }
 
 //    @Test
     public static void js() throws FileNotFoundException {

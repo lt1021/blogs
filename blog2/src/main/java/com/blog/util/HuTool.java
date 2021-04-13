@@ -1,5 +1,6 @@
 package com.blog.util;
 
+import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.convert.Convert;
 import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.lang.Console;
@@ -33,7 +34,6 @@ public class HuTool extends Convert {
     public static Long[] toLongArrays(Object value, Long[] defaultValue) {
         return convertQuietly(Long.class, value, defaultValue);
     }
-
     /**
      * 转换为字符串
      */
