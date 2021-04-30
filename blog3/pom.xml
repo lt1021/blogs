@@ -97,6 +97,12 @@
             <groupId>org.crazycake</groupId>
             <artifactId>shiro-redis</artifactId>
             <version>${shiro-redis.version}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>checkstyle</artifactId>
+                    <groupId>com.puppycrawl.tools</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <!-- 导入thymeleaf对shiro的扩展坐标 -->
         <dependency>

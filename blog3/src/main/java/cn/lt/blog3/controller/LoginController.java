@@ -2,7 +2,7 @@ package cn.lt.blog3.controller;
 
 import cn.lt.blog3.base.em.ResponseStatus;
 import cn.lt.blog3.base.result.ResponseData;
-import cn.lt.blog3.entity.User;
+import cn.lt.blog3.api.entity.User;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.UsernamePasswordToken;

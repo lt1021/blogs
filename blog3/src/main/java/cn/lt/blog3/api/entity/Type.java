@@ -1,4 +1,4 @@
-package cn.lt.blog3.entity;
+package cn.lt.blog3.api.entity;
 
 import cn.lt.blog3.base.bean.BaseInfo;
 import io.swagger.annotations.ApiModel;

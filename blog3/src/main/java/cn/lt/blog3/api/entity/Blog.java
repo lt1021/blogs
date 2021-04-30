@@ -1,4 +1,4 @@
-package cn.lt.blog3.entity;
+package cn.lt.blog3.api.entity;
 
 import cn.lt.blog3.base.bean.BaseInfo;
 import io.swagger.annotations.ApiModel;
@@ -38,41 +38,40 @@ public class Blog extends BaseInfo {
     @ApiModelProperty(value = "浏览次数")
     private Integer views;
 
-    @ApiModelProperty(value = "标题")
+    @ApiModelProperty(value = "赞赏开启")
     private Boolean appreciation;
 
-    @ApiModelProperty(value = "标题")
+    @ApiModelProperty(value = "版权开启")
     private Integer shareStatement;
 
-    @ApiModelProperty(value = "标题")
+    @ApiModelProperty(value = "评论开启")
     private Integer commentabled;
 
-    @ApiModelProperty(value = "标题")
+    @ApiModelProperty(value = "发布")
     private Integer published;
 
-    @ApiModelProperty(value = "标题")
+    @ApiModelProperty(value = "推荐")
     private Integer recommend;
 
-    @ApiModelProperty(value = "标题")
+    @ApiModelProperty(value = "创建时间")
     private Date createTime;
 
-    @ApiModelProperty(value = "标题")
+    @ApiModelProperty(value = "更新时间")
     private Date updateTime;
 
-    @ApiModelProperty(value = "标题")
+    @ApiModelProperty(value = "类型id")
     private Long typeId;
 
-    @ApiModelProperty(value = "标题")
+    @ApiModelProperty(value = "用户id")
     private Long userId;
 
-    @ApiModelProperty(value = "标题")
+    @ApiModelProperty(value = "描述")
     private String description;
 
-    @ApiModelProperty(value = "标题")
+    @ApiModelProperty(value = "标签id")
     private String tagIds;
 
-    @ApiModelProperty(value = "标题")
-    private String firstPocture;
+
 
 
 }

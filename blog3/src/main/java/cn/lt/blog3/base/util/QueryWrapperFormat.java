@@ -3,8 +3,7 @@ package cn.lt.blog3.base.util;
 import cn.lt.blog3.base.annotation.SqlWhere;
 import cn.lt.blog3.base.sql.SqlField;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.blog.base.em.WhereType;
-import com.blog.base.util.BeanHelp;
+//import com.blog.base.em.WhereType;
 
 import java.lang.reflect.Field;
 import java.util.Arrays;

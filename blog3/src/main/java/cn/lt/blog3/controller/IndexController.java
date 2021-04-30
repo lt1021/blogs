@@ -3,14 +3,18 @@ package cn.lt.blog3.controller;
 
 import cn.lt.blog3.base.bean.BaseInfo;
 import cn.lt.blog3.base.bean.QueryInfo;
+import cn.lt.blog3.base.result.PageResult;
 import cn.lt.blog3.base.result.ResponseData;
 import cn.lt.blog3.controller.base.BaseController;
+import cn.lt.blog3.api.entity.Blog;
+import cn.lt.blog3.api.service.BlogService;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
 import io.swagger.annotations.ApiOperation;
-import org.apache.poi.hssf.record.formula.functions.T;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -19,11 +23,19 @@ import org.springframework.web.bind.annotation.RestController;
  * @date 2021/4/7 17:56
  */
 @RestController
-public class IndexController<T extends BaseInfo, Q extends QueryInfo> extends BaseController<T,Q> {
+public class IndexController extends BaseController<Blog,QueryInfo> {
+    @Autowired
+    private BlogService service;
 
+    static {
+        System.out.println("测试");
+    }
     @GetMapping("/")
-    public ResponseData index() {
-        return ResponseData.data();
+    public PageResult index() {
+        IPage<Blog> page = new Page<>();
+        page.setRecords(service.list());
+        page.setTotal(service.count());
+        return PageResult.data(page.getTotal(),page.getRecords());
     }
 
     @ApiOperation(value = "搜索")
@@ -33,7 +45,7 @@ public class IndexController<T extends BaseInfo, Q extends QueryInfo> extends Ba
     }
 
     @Override
-    protected IService<T> getService() {
-        return null;
+    protected IService getService() {
+        return service;
     }
 }

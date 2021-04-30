@@ -1,6 +1,6 @@
 #开发环境
 server:
-  port: 8082
+  port: 8083
   servlet:
     encoding:
       force: true

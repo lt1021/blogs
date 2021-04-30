@@ -12,7 +12,7 @@ import com.baomidou.mybatisplus.generator.config.po.TableInfo;
 import com.baomidou.mybatisplus.generator.config.rules.DateType;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
-import com.blog.base.service.CacheService;
+//import com.blog.base.service.CacheService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -144,7 +144,7 @@ public class CodeGenerator {
         strategy.setSuperEntityClass(BaseInfo.class);
         strategy.setEntityLombokModel(true);
         strategy.setRestControllerStyle(true);
-        strategy.setSuperServiceImplClass(CacheService.class);
+//        strategy.setSuperServiceImplClass(CacheService.class);
         // 写于父类中的公共字段
         strategy.setSuperEntityColumns("id");
         strategy.setInclude(scanner(table_name).split(","));
