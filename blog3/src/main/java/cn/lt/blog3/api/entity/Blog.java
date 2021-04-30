@@ -1,6 +1,7 @@
 package cn.lt.blog3.api.entity;
 
 import cn.lt.blog3.base.bean.BaseInfo;
+import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -19,6 +20,7 @@ import java.util.Date;
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ApiModel(value="TBlog对象", description="")
+@TableName("t_blog")
 public class Blog extends BaseInfo {
 
     private static final long serialVersionUID = 1L;

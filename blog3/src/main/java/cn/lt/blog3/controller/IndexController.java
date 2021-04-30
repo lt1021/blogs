@@ -13,9 +13,11 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 /**
  * 首页
@@ -31,11 +33,9 @@ public class IndexController extends BaseController<Blog,QueryInfo> {
         System.out.println("测试");
     }
     @GetMapping("/")
-    public PageResult index() {
-        IPage<Blog> page = new Page<>();
-        page.setRecords(service.list());
-        page.setTotal(service.count());
-        return PageResult.data(page.getTotal(),page.getRecords());
+    public ResponseData index(Model model) {
+//        model.addAttribute()
+        return ResponseData.data( service.queryPage());
     }
 
     @ApiOperation(value = "搜索")
