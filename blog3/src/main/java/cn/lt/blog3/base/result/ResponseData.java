@@ -5,7 +5,9 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
+
 import java.util.List;
+import java.util.Map;
 
 /**
  * 返回数据
@@ -15,7 +17,7 @@ import java.util.List;
  */
 @Data
 @ApiModel("返回数据")
-public class ResponseData<T> {
+public class ResponseData<T>  {
 
     @ApiModelProperty("状态码，默认成功。")
     private ResponseStatus status;
@@ -74,8 +76,8 @@ public class ResponseData<T> {
 
     /**
      * boolean对象
-     * @param t
      * @param <T>
+     * @param t
      * @return
      */
     public static <T> ResponseData<T> data(T t) {
@@ -94,7 +96,19 @@ public class ResponseData<T> {
      */
     public static <T>ResponseData<T> data(List<T> t){
         ResponseData data = new ResponseData(t);
+        System.out.println(data.data);
+
         return data;
+    }
+
+    /**
+     * Map
+     * @param param
+     * @return
+     */
+    public static ResponseData data(Map<String, Object> param) {
+        ResponseData responseData = new ResponseData(param);
+        return responseData;
     }
 
     /**。
@@ -109,6 +123,9 @@ public class ResponseData<T> {
     }
 
 
-
-
+//    @Override
+//    public ResponseData put(String key, Object value) {
+//        super.put(key, value);
+//        return this;
+//    }
 }

@@ -1,6 +1,7 @@
 package cn.lt.blog3.api.entity;
 
 import cn.lt.blog3.base.bean.BaseInfo;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -62,6 +63,7 @@ public class Blog extends BaseInfo {
     private Date updateTime;
 
     @ApiModelProperty(value = "类型id")
+    @TableField("type_id")
     private Long typeId;
 
     @ApiModelProperty(value = "用户id")
@@ -71,6 +73,7 @@ public class Blog extends BaseInfo {
     private String description;
 
     @ApiModelProperty(value = "标签id")
+    @TableField("tag_ids")
     private String tagIds;
 
 

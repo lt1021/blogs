@@ -35,7 +35,7 @@ public class IndexController extends BaseController<Blog,QueryInfo> {
     @GetMapping("/")
     public ResponseData index(Model model) {
 //        model.addAttribute()
-        return ResponseData.data( service.queryPage());
+        return ResponseData.data(service.queryPage() );
     }
 
     @ApiOperation(value = "搜索")
