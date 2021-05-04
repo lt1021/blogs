@@ -74,6 +74,8 @@ public class Blog extends BaseInfo {
 
     @ApiModelProperty(value = "标签id")
     @TableField("tag_ids")
+//    @OneToMany
+//    @JoinColumn(name="company_id",referencedColumnName = "company_id")
     private String tagIds;
 
 

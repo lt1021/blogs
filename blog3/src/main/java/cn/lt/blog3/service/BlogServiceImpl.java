@@ -41,7 +41,7 @@ public class BlogServiceImpl extends BaseServiceImpl<BlogMapper, Blog> implement
         List<Blog> blog =this.list();
         data.put("blog", blog);
         data.put("type", typeService.getBlogType());  //获取博客的类型(联表查询)
-        data.put("tag", tagService.getBlogTag());//获取博客的标签(联表查询)
+//        data.put("tag", tagService.getBlogTag());//获取博客的标签(联表查询)
         data.put("recommendBlogs", list(Wrappers.<Blog>lambdaQuery().orderByDesc(Blog::getUpdateTime))); //获取推荐博客
         List list = new ArrayList();
         list.add(data);

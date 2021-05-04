@@ -17,7 +17,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.ModelAndView;
 
 /**
  * 首页
@@ -34,7 +33,6 @@ public class IndexController extends BaseController<Blog,QueryInfo> {
     }
     @GetMapping("/")
     public ResponseData index(Model model) {
-//        model.addAttribute()
         return ResponseData.data(service.queryPage() );
     }
 
