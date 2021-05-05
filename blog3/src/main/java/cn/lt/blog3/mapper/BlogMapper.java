@@ -12,7 +12,5 @@ import java.util.List;
  * @date 2021/4/30 16:55
  */
 public interface BlogMapper extends BaseMapper<Blog> {
-    @Select("select * from t_blog b " +
-            "where b.type_id =#{id}")
-     List<Blog> getBlogByType(@Param("id") Integer id);
+
 }

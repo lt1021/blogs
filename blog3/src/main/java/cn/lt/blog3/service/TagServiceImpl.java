@@ -1,5 +1,6 @@
 package cn.lt.blog3.service;
 
+import cn.lt.blog3.api.entity.Blog;
 import cn.lt.blog3.api.entity.Tag;
 import cn.lt.blog3.api.service.TagService;
 import cn.lt.blog3.mapper.TagMapper;

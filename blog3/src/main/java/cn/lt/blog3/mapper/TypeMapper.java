@@ -1,9 +1,9 @@
 package cn.lt.blog3.mapper;
 
+import cn.lt.blog3.api.entity.Blog;
 import cn.lt.blog3.api.entity.Type;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.*;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -13,18 +13,20 @@ import java.util.List;
  */
 public interface TypeMapper extends BaseMapper<Type> {
 
-//    @Select("select t.id,t.name from t_type t ,t_blog b where t.id = b.type_id")
-//    @ResultMap(value = "typeMap")
-    @Select("select t.id tid, t.name, b.id bid, b.title, b.type_id " +
-            "from t_type t, t_blog b " +
-            "where t.id = b.type_id")
-    @ResultMap(value = "type")
-    @Results(id = "type",  value = {
-            @Result(column = "id", property = "id", id = true),
-            @Result(column = "name", property = "name"),
-            @Result(property = "blogs", javaType = List.class,
-                    column = "id",
-                    many = @Many(select = "cn.lt.blog3.mapper.mapper.BlogMapper.getBlogByType"))
-    })
+//
+//    @Select("select t.id tid, t.name, b.id bid, b.title, b.type_id " +
+//            "from t_type t, t_blog b " +
+//            "where t.id = b.type_id")
+//    @Results(id = "typeMap",value = {
+//            @Result(id = true, column = "tid",property = "id"),
+//            @Result(column = "name", property = "name"),
+//            @Result(column = "bid", property = "blogs", javaType = List.class,many = @Many(select = "getBlogByType"))
+//    })
+//    @ResultMap(value = "type")
     List<Type> getBlogType();
+
+//    @Select("select * from t_blog b " +
+//            "where b.type_id =#{id}")
+//    List<Blog> getBlogByType(@Param("id") Integer id);
+
 }

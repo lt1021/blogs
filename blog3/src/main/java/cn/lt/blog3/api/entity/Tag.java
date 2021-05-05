@@ -7,6 +7,8 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
+import java.util.List;
+
 /**
  * <p>
  * 
@@ -18,13 +20,15 @@ import lombok.EqualsAndHashCode;
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ApiModel(value="TTag对象", description="")
-@TableName("t_tag")
+@TableName(value = "t_tag")
 public class Tag extends BaseInfo {
 
     private static final long serialVersionUID = 1L;
 
     @ApiModelProperty(value = "名称")
     private String name;
+
+    private List<Blog> blogs;
 
 
 }
